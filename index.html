@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget</title>
+  
+  <link rel="stylesheet" type="text/css" href="inline.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Budget">
+  <link rel="apple-touch-icon" href="icon_400x400.jpg">
+  <meta name="msapplication-TileImage" content="icon_400x400.jpg">
+  <meta name="msapplication-TileColor" content="#059b72">
+  
+</head>
+<body>
+<!--
+  <header class="header">
+    <h1 class="header__title">Budget</h1>
+    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+  </header>
+-->
+  <main class="main">
+    <div class="top-card">
+      <div id="amount" class="top-card-amount"></div>
+    </div>
+    <div class="amount">
+    	Add purchase
+    	<input type="number" pattern="\d*" id="newPurchaseAmount" placeholder="Amount"/>
+    	<button id="butAddPurchase" class="button">Add</button>
+    	<hr />
+    	Change daily amount
+    	<input type="number" pattern="\d*" id="newPerDay" placeholder=""/>
+    	<button id="butPerDay" class="button">Change</button>
+    </div>
+  </main>
+
+  <div class="dialog-container">
+    <div class="dialog">
+      <div class="dialog-title">Change daily amount</div>
+      <div class="dialog-body">
+      	<input id="newPerDay" placeholder="Amount"/>
+      </div>
+      <div class="dialog-buttons">
+        <button id="butPerDay" class="button">Change</button>
+        <button id="butAddCancel" class="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+  -->
+  <!-- Uncomment the line below when ready to test with fake data -->
+  <script src="app.js" async></script>
+
+</body>
+</html>
