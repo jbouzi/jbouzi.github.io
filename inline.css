@@ -158,8 +158,8 @@ input {
 }
 
 .top-card {
-  background: rgb(5,155,114);
-//  background: #000;
+ // background: rgb(5,155,114);
+  background: #000;
   height: 40%;
   width: 100%;
  }
