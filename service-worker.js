@@ -7,12 +7,13 @@
 // var dataCacheName = 'amountData-v1';
 var cacheName = 'amountPWA-final-1';
 var filesToCache = [
-  '/Todo/',
-  '/Todo/index.html',
-  '/Todo/app.js',
-  '/Todo/manifest.json',
-  '/Todo/icon_400x400.jpg',
-  '/Todo/inline.css'
+  '/',
+  '/index.html',
+  '/app.js',
+  '/manifest.json',
+  '/icon_400x400.jpg',
+  '/splash.jpg',
+  '/inline.css'
 ];
 
 self.addEventListener('install', function(e) {
