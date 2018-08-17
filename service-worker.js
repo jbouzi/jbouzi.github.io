@@ -12,7 +12,7 @@ var filesToCache = [
   '/app.js',
   '/manifest.json',
   '/icon_400x400.jpg',
-  '/splash.jpg',
+  '/splash.png',
   '/inline.css'
 ];
 
