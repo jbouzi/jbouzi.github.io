@@ -120,6 +120,9 @@ input[type="radio"]{
   position:absolute;
   right:1000%;
 }
+h1 {
+  text-align: center;
+}
 #slider{
   position:absolute;
   left:0%; top:0;
