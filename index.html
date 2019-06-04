@@ -15,69 +15,15 @@
   <link rel="apple-touch-startup-image" href="/splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
   <meta name="msapplication-TileImage" content="icon_400x400.jpg">
   <meta name="msapplication-TileColor" content="#059b72">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   
 </head>
 <body>
-    <div class="tabbar">
-        <label class="tabbar__item">
-          <input type="radio" name="tabbar-c" checked="checked">
-          <button class="tabbar__button">
-            <div class="tabbar__label">One</div>
-          </button>
-        </label>
-      
-        <label class="tabbar__item">
-          <input type="radio" name="tabbar-c">
-          <button class="tabbar__button">
-            <div class="tabbar__label">Two</div>
-          </button>
-        </label>
-      
-        <label class="tabbar__item">
-          <input type="radio" name="tabbar-c">
-          <button class="tabbar__button">
-            <div class="tabbar__label">Three</div>
-          </button>
-        </label>
-      </div>
-  <main class="main">
-    <div class="top-card">
-      <div id="amount" class="top-card-amount"></div><br />
-    </div>
-    <div class="amount">
-    	Add purchase
-    	<input type="number" pattern="\d*" id="newPurchaseAmount" placeholder="Amount"/>
-    	<button id="butAddPurchase" class="button">Add</button>
-    	<hr />
-    	Change daily amount
-    	<input type="number" pattern="\d*" id="newPerDay" placeholder=""/>
-    	<button id="butPerDay" class="button">Change</button>
-    </div>
-  </main>
-
-  <div class="dialog-container">
-    <div class="dialog">
-      <div class="dialog-title">Change daily amount</div>
-      <div class="dialog-body">
-      	<input id="newPerDay" placeholder="Amount"/>
-      </div>
-      <div class="dialog-buttons">
-        <button id="butPerDay" class="button">Change</button>
-        <button id="butAddCancel" class="button">Cancel</button>
-      </div>
-    </div>
+  <div class="tabbar">
+    <a href="#">One</a>
+    <a href="#">Two</a>
+    <a href="#">Three</a>
   </div>
-  <!--
-  <div class="loader">
-    <svg viewBox="0 0 32 32" width="32" height="32">
-      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-    </svg>
-  </div>
-  -->
-  <!-- Uncomment the line below when ready to test with fake data -->
+ 
   <script src="app.js" async></script>
 
 </body>

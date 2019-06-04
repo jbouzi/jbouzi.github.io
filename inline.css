@@ -38,49 +38,7 @@ body {
   }
 
 
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0); }
-  to {
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg); } }
 
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0); }
-  to {
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg); } }
-
-@-webkit-keyframes line {
-  0% {
-    stroke-dasharray: 2, 85.964;
-    -webkit-transform: rotate(0);
-            transform: rotate(0); }
-  50% {
-    stroke-dasharray: 65.973, 21.9911;
-    stroke-dashoffset: 0; }
-  100% {
-    stroke-dasharray: 2, 85.964;
-    stroke-dashoffset: -65.973;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg); } }
-
-@keyframes line {
-  0% {
-    stroke-dasharray: 2, 85.964;
-    -webkit-transform: rotate(0);
-            transform: rotate(0); }
-  50% {
-    stroke-dasharray: 65.973, 21.9911;
-    stroke-dashoffset: 0; }
-  100% {
-    stroke-dasharray: 2, 85.964;
-    stroke-dashoffset: -65.973;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg); } }
 
 .main {
   padding-top: 0px;
@@ -93,65 +51,7 @@ body {
   background-color: #fff;
   -webkit-overflow-scrolling: touch; }
 
-.dialog-container {
-  background: rgba(0, 0, 0, 0.57);
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  pointer-events: none;
-  will-change: opacity;
-  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);
-  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1); }
 
-.dialog-container--visible {
-  opacity: 1;
-  pointer-events: auto; }
-
-.dialog {
-  background: #FFF;
-  border-radius: 2px;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
-  min-width: 280px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) translateY(30px);
-          transform: translate(-50%, -50%) translateY(30px);
-  -webkit-transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
-  transition: -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
-  transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s;
-  transition: transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s, -webkit-transform 0.333s cubic-bezier(0, 0, 0.21, 1) 0.05s; }
-
-.dialog > div {
-  padding-left: 24px;
-  padding-right: 24px; }
-
-.dialog-title {
-  padding-top: 20px;
-  font-size: 1.25em; }
-
-input {
-	margin-top: 15px;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	height: 30px;
-}
-
-.top-card {
-  background: rgb(5,155,114);
- // background: #000;
-  height: 40%;
-  width: 100%;
- }
- 
- hr {
-   margin-top: 30px;
-   margin-bottom: 30px;
- }
  
  button {
    background: rgb(5,155,114);
@@ -164,49 +64,14 @@ input {
    font-weight: bold;
  }
  
-.top-card-amount {
-  font-size: 3em;
-  color: #fff;
-  position:relative;
-  top: 50%;
-  left: 50%;
-  text-align:center;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.dialog-body {
-  padding-top: 20px;
-  padding-bottom: 24px; }
-  .dialog-body select {
-    width: 100%;
-    font-size: 2em; }
-
-.dialog-buttons {
-  padding: 8px !important;
-  float: right; }
-
-.amount {
-  padding: 16px;
-  border-radius: 25px;
-  margin-top: 30%;
-  box-sizing: border-box;
-  background: #fff;
-  margin: 16px;
-  top: -45px;
-  position: relative;
-  
-  font-size: 22px;
-  text-align: center;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); 
-}
-.navbar {
+.tabbar {
   background-color: #333;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
-  text-align: justify;
 }
+
 /* Style the links inside the navigation bar */
 .navbar a {
   float: left;
