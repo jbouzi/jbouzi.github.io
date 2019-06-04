@@ -21,29 +21,28 @@
   
 </head>
 <body>
-  <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
-  <template id="page1.html">
-      <ons-page id="page1">
-        <ons-toolbar>
-          <div class="center">Page 1</div>
-        </ons-toolbar>
-    
-        <p>This is the first page.</p>
-    
-        <ons-button id="push-button">Push page</ons-button>
-      </ons-page>
-    </template>
-    
-    <template id="page2.html">
-      <ons-page id="page2">
-        <ons-toolbar>
-          <div class="left"><ons-back-button>Page 1</ons-back-button></div>
-          <div class="center"></div>
-        </ons-toolbar>
-    
-        <p>This is the second page.</p>
-      </ons-page>
-    </template>
+    <div class="tabbar">
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-c" checked="checked">
+          <button class="tabbar__button">
+            <div class="tabbar__label">One</div>
+          </button>
+        </label>
+      
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-c">
+          <button class="tabbar__button">
+            <div class="tabbar__label">Two</div>
+          </button>
+        </label>
+      
+        <label class="tabbar__item">
+          <input type="radio" name="tabbar-c">
+          <button class="tabbar__button">
+            <div class="tabbar__label">Three</div>
+          </button>
+        </label>
+      </div>
   <main class="main">
     <div class="top-card">
       <div id="amount" class="top-card-amount"></div><br />
