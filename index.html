@@ -15,21 +15,13 @@
   <link rel="apple-touch-startup-image" href="/splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
   <meta name="msapplication-TileImage" content="icon_400x400.jpg">
   <meta name="msapplication-TileColor" content="#059b72">
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
   
 </head>
 <body>
-      <div data-role="footer">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#" data-icon="grid">Summary</a></li>
-                    <li><a href="#" data-icon="star" class="ui-btn-active">Favs</a></li>
-                    <li><a href="#" data-icon="gear">Setup</a></li>
-                </ul>
-            </div>
-    </div>
+  <ons-button onclick="alert('Hello World!')">Click Me</ons-button>
   <main class="main">
     <div class="top-card">
       <div id="amount" class="top-card-amount"></div><br />
