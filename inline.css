@@ -104,6 +104,11 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
+
+.slider > div {
+  scroll-snap-align: start;
+}
+
 .slide {
   width: 100%;
   flex-shrink: 0;
