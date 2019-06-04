@@ -73,7 +73,7 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-.navbar a {
+.tabbar a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -86,11 +86,11 @@ body {
 }
 
 /* Change the color of links on hover */
-.navbar a:hover {
+.tabbar a:hover {
   color: #ffffff;
 }
 
 /* Add a color to the active/current link */
-.navbar a.active {
+.tabbar a.active {
   color: #ffffff;
 }
