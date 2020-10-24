@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+.main {
+  float:left;
+  width:70%;
+  padding:50px;
+}
+.right {
+  float:left;
+  width:30%;
+  padding:50px;
+}
+.header {
+  background: url(boken.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:200px;
+  padding:70px 0;
+  text-align:center;
+}
+h2 {
+  margin-bottom: 10px;
+  width:100%;
+  color:#cc0000;
+}
+.song-title {
+  margin-top:20px;
+  font-weight:bold;
+  font-size:1.2em;
+  text-align:center;
+  width:100%;
+  margin-bottom:50px;
+}
+h1 {
+  color:#fff;
+  text-shadow:2px 2px 4px rgba(0,0,0,.7);
+}
+a {
+  text-decoration:none;
+  color:#444;
+}
+a:hover {
+  text-decoration:underline;
+}
+input {
+  padding:9px 0;
+  margin:9px 0;
+  width:100%;
+  font-size:1em;
+  color:#444;
+  border:0;
+  border-bottom:1px solid #999;
+}
+input:focus {
+  border:0;
+  outline: none;
+  color:#000;
+  border-bottom:1px solid #000;
+}
+input.best {
+  background-color: #cc0000;
+  color: #fff;
+  border: 0px;
+  border-radius: 8px;
+  height:40px;
+}
+.leadsheet-image {
+  width: 80%;
+}
+body {
+  font-family:"Roboto", sans-serif;
+  color:#444;
+  line-height: 1.5;
+}
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .main, .right {
+    width:100%;
+    padding:20px;
+  }
+  .leadsheet-image {
+    width: 100%;
+  }
+  .header {
+    padding:30px 10px;
+  }
+}
