@@ -11,42 +11,67 @@
 		.abcjs-inline-audio {
 			max-width: 770px;
 		}
-	</style>
+		.abcjs-highlight {
+		fill: #0a9ecc;
+		}
+		</style>
 </head>
 <body>
-<div id="notation"></div>
+	<form action="index.html" method="get">
+		Song: <select name="song">
+			<option value="air">Air - Bach</option>
+			<option value="auldLangSyne">Auld Lang Syne - Robert Burnes</option>
+			<option value="lipSlur">Lip Slur Exercise</option>
+			<option value="gymnopedie1">Gymnopedie 1 - Erik Satie</option>
+		</select>
+		Bmp: <input name="tempo" value="60" />
+		<input type="submit" value="Show"/>
+	</form>
+<div id="notationBb"></div>
 <div id="audio"></div>
+<div style="visibility:hidden; border: 1px solid rgb(150, 140, 140)" id="notationC"></div>
+
 
 <script type="text/javascript">
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	const song = urlParams.get('song')
+	const tempo = urlParams.get('tempo')
+
 	function onMidi() {
 		if (ABCJS.synth.supportsAudio()) {
-			var visualObj = ABCJS.renderAbc('notation', fileContent, {responsive: 'resize'})[0];
+			var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize'})[0];
+			var visualObjC = ABCJS.renderAbc('notationC', fileContentC, {responsive: 'resize'})[0];
 			var synthControl = new ABCJS.synth.SynthController();
 			synthControl.load("#audio", null, {displayRestart: true, displayPlay: true, displayProgress: true});
-			synthControl.setTune(visualObj, false);
+			synthControl.setTune(visualObjC, false);
 		} else {
 			document.querySelector("#audio").innerHTML = "<div class='audio-error'>Audio is not supported in this browser.</div>";
 		}
 	}
 
-    var fileContent = "";
-    readTextFile("abc/gymnopedie1.abc")
     function readTextFile(file)
     {
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", file, false);
+		var texten = "";
         rawFile.onreadystatechange = function ()
         {
             if(rawFile.readyState === 4)
             {
                 if(rawFile.status === 200 || rawFile.status == 0)
                 {
-                    fileContent = rawFile.responseText;
+                    texten = rawFile.responseText;
                 }
             }
         }
-        rawFile.send(null);
+		rawFile.send(null);
+		return texten;
     }
+	var fileContentBb = readTextFile("abc/"+ song + ".abc")
+	var fileContentC = readTextFile("abc/"+ song + "BT.abc")
+	if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
+	if(tempo != null) {fileContentC = fileContentC.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
     onMidi();
     // ABCJS.renderAbc("notation", fileContent);
 </script>
