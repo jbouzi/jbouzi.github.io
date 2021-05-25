@@ -17,20 +17,20 @@
 		</style>
 </head>
 <body>
-	<form action="index.html" method="get">
-		Song: <select name="song">
-			<option value="air">Air - Bach</option>
-			<option value="auldLangSyne">Auld Lang Syne - Robert Burnes</option>
-			<option value="lipSlur">Lip Slur Exercise</option>
-			<option value="gymnopedie1">Gymnopedie 1 - Erik Satie</option>
-		</select>
-		Bmp: <input name="tempo" value="60" />
-		<input type="submit" value="Show"/>
-	</form>
+
 <div id="notationBb"></div>
 <div id="audio"></div>
 <div style="visibility:hidden; border: 1px solid rgb(150, 140, 140)" id="notationC"></div>
-
+<form action="index.html" method="get">
+	Song: <select name="song">
+		<option value="air">Air - Bach</option>
+		<option value="auldLangSyne">Auld Lang Syne - Robert Burnes</option>
+		<option value="lipSlur">Lip Slur Exercise</option>
+		<option value="gymnopedie1">Gymnopedie 1 - Erik Satie</option>
+	</select><br />
+	Bmp: <input name="tempo" value="60" />
+	<input type="submit" value="Show"/>
+</form>
 
 <script type="text/javascript">
 	const queryString = window.location.search;
