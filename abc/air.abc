@@ -1,0 +1,11 @@
+X:1
+T:Air
+C:Bach
+Q:1/4=60
+M:C
+K:F
+L:1/4
+V:1 score=_B
+%%MIDI program 57
+A4- | A4 | z d/B/ G/F/E/F/ | E3/2 D/ C2 | c4- | c/A/_E/D/ G/^F/c/B/ | B4 |
+B/G/D/C/ F/E/B/A/ | A3 =B/c/ | F F/4G/4A/-A/G/G/F/ | E/D/ D/4E/4F/-F E/D/ | C4 :|
