@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>abcjs basic demo</title>
 	<link href="css/abcjs-audio.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="js/abcjs-basic-min.js" type="text/javascript"></script>
 	<style>
 		.abcjs-inline-audio {
@@ -16,65 +18,19 @@
 		}
 		</style>
 </head>
-<body>
+<body onload="load()">
+	<h1>Play Along Bb Trumpet</h1>
 
-<div id="notationBb"></div>
-<div id="audio"></div>
-<div style="visibility:hidden; border: 1px solid rgb(150, 140, 140)" id="notationC"></div>
-<form action="index.html" method="get">
-	Song: <select name="song">
-		<option value="air">Air - Bach</option>
-		<option value="auldLangSyne">Auld Lang Syne - Robert Burnes</option>
-		<option value="lipSlur">Lip Slur Exercise</option>
-		<option value="gymnopedie1">Gymnopedie 1 - Erik Satie</option>
-	</select><br />
-	Bmp: <input name="tempo" value="60" />
-	<input type="submit" value="Show"/>
-</form>
+<b>Exercises</b><br />
+<a href="play.html?song=lipSlur">Lip Slur Exercise</a><br />
+<br />
+<b>Songs</b><br />
+<a href="play.html?song=air">Air - Bach</a><br />
+<a href="play.html?song=auldLangSyne">Auld Lang Syne - Robert Burns</a><br />
+<a href="play.html?song=gymnopedie1">Gymnopedie 1 - Erik Satie</a><br />
+<a href="play.html?song=pippi">Pippi L&aring;ngstrum - Jan Johansson</a><br />
 
-<script type="text/javascript">
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-	const song = urlParams.get('song')
-	const tempo = urlParams.get('tempo')
 
-	function onMidi() {
-		if (ABCJS.synth.supportsAudio()) {
-			var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize'})[0];
-			var visualObjC = ABCJS.renderAbc('notationC', fileContentC, {responsive: 'resize'})[0];
-			var synthControl = new ABCJS.synth.SynthController();
-			synthControl.load("#audio", null, {displayRestart: true, displayPlay: true, displayProgress: true});
-			synthControl.setTune(visualObjC, false);
-		} else {
-			document.querySelector("#audio").innerHTML = "<div class='audio-error'>Audio is not supported in this browser.</div>";
-		}
-	}
-
-    function readTextFile(file)
-    {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-		var texten = "";
-        rawFile.onreadystatechange = function ()
-        {
-            if(rawFile.readyState === 4)
-            {
-                if(rawFile.status === 200 || rawFile.status == 0)
-                {
-                    texten = rawFile.responseText;
-                }
-            }
-        }
-		rawFile.send(null);
-		return texten;
-    }
-	var fileContentBb = readTextFile("abc/"+ song + ".abc")
-	var fileContentC = readTextFile("abc/"+ song + "BT.abc")
-	if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
-	if(tempo != null) {fileContentC = fileContentC.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
-    onMidi();
-    // ABCJS.renderAbc("notation", fileContent);
-</script>
 
 </body>
 </html>
