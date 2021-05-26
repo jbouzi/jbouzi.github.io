@@ -9,11 +9,12 @@ V:1
 _B,/ F/ _B,/ F/ _B/ F/ _B, | z4 | _B,/ F/ _B,/ F/ _B/ F/ _B, | z4 |
 A,/ _F/ A,/ _F/ A/ _F/ A, | z4 | A,/ _F/ A,/ _F/ A/ _F/ A, | z4 |
 _A,/ E/ _A,/ E/ _A/ E/ _A, | z4 | _A,/ E/ _A,/ E/ _A/ E/ _A, | z4 |
-G,/ D/ G,/ D/ G/ D/ G, | z4 | G,/ D G,/ D/ G/ D/ G, | z4 |
+G,/ D/ G,/ D/ G/ D/ G, | z4 | G,/ D/ G,/ D/ G/ D/ G, | z4 |
 _G,/ _D/ _G,/ _D/ _G/ _D/ _G, | z4 | _G,/ _D/ _G,/ _D/ _G/ _D/ _G, | z4 |
 V:2
 %%MIDI program 116
-f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ |
-f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ |
-f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ |
-f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ | f/ f/ f/ f/ f/ f/ f/ f/ |
+F F F F | F F F F | F F F F | F F F F |
+F F F F | F F F F | F F F F | F F F F |
+F F F F | F F F F | F F F F | F F F F |
+F F F F | F F F F | F F F F | F F F F |
+F F F F | F F F F | F F F F | F F F F |

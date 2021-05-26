@@ -6,6 +6,7 @@ M:C
 K:G
 L:1/4
 V:1
-%%MIDI program 57
+%%MIDI transpose -2
+%%MIDI program 41
 B4- | B4 | z e/c/ A/G/F/G/ | F3/2 E/ D2 | d4- | d/B/=F/E/ A/^G/d/c/ | c4 |
 c/A/E/D/ G/F/c/B/ | B3 ^c/d/ | G G/4A/4B/-B/A/A/G/ | F/E/ E/4F/4G/-G F/E/| D4 :|

@@ -7,7 +7,7 @@ K:D
 L:1/4
 %% score {1 (2 3)}
 V:1
-%%MIDI program 60
+%%MIDI program 41
 z4 | z4 | z4 | z4 | z (F A | G F C | B, C D | A,3 | F,3)- | F,3- | F,3- | F,3 |
 z F A | G F C | B, C D | A,3 | C3 | F3 | E,3- | E,3- | E,3 |
 A, B, =C | E D B, | D =C B, | D3- | D2 D | E =F G | A =C D | E D B, | D3 |]
@@ -17,4 +17,5 @@ G,,3 | D,,3 | G,,3 | D,,3 | F,,3 | B,,,3 | E,,3 | E,,3 | D,,3 |
 A,,,3 | D,,3 | D,,3 | D,,3 | D,,3 | D,,3 | D,,3 | D,,3 | D,,3 |]
 V:3 bass
 x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 |
-x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 | x [FCA,]2 | x [B,DF]2 |
+x [B,DF]2 | x [FCA,]2 | x [B,DF]2 | x [FCA,]2 | x [FCA,]2 | x [B,DF]2 | x [G,B,]2 | x [B,DG]2 | x [F,A,D]2 |
+x [A,=CE]2 | x [G,B,E]2 | x [D,G,B,]2 | x [C,E,A,]2 |
