@@ -7,6 +7,6 @@ K:F
 L:1/4
 V:1
 %%MIDI transpose -2
-C | "F"F3/2 E/ F A | "C7"G3/2 F/ G A | "F"F3/2 F/ "F7"A c | "B b"d3 d | "F"c3/2 A/ A F | 
+C | "F"F3/2 E/ F A | "C7"G3/2 F/ G A | "F"F3/2 F/ "F7"A c | "Bb"d3 d | "F"c3/2 A/ A F | 
 "C7"G3/2 F/2 G A/G/ | "Bb"F3/2 D/ "C7"D C | "F"F3 "Bb"d | "F"c3/2 A/ A F | "C7"G3/2 F/ G d | "F"c3/2 A/ A c | 
 "Bb"d3 d | "F"c3/2 A/ A F | "C7"G3/2 F/2 G A/G/ | "Bb"F3/2 D/ "C7"D C | "F"F4 |]
