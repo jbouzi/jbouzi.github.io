@@ -25,7 +25,11 @@
 		<i class="material-icons nav__icon">library_music</i>
 		<span class="nav__text">Songs</span>
 	  </a>
-	  <a href="#" id="play-audio" class="nav__link">
+	  <a href="#" id="play-audio-first" class="nav__link">
+		<i class="material-icons nav__icon">play_circle_outline</i>
+		<span class="nav__text">Play</span>
+	  </a>
+	  <a href="#" style="display:none;" id="play-audio" class="nav__link">
 		<i class="material-icons nav__icon">play_circle_outline</i>
 		<span class="nav__text">Play</span>
 	  </a>
@@ -51,7 +55,9 @@
 </div>
 
 <script type="text/javascript">
-	
+	var divsCount = 1;
+	var divsArray = [];
+
 	function load() {
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
@@ -66,9 +72,23 @@
 
 		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize', oneSvgPerLine: true})[0];
 		var visualObjC = ABCJS.renderAbc('*', fileContentC, {responsive: 'resize'})[0];
-		var timingCallbacks = ABCJS.TimingCallbacks(visualObjC, {lineEndCallback:nextLine()});
-		
+		console.log("1");
+		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjC, {lineEndCallback: lineEndCallback,});
+		console.log("2");
 		var midiBuffer;
+		var divsCount = 0;
+
+		divs = document.querySelectorAll('#notationBb > div');
+		divsArray = [].slice.call(divs);
+		if(divsArray.length > 2) {
+			divsArray.forEach(hideDiv);
+			function hideDiv(item,index) {
+				divs[index].style.display="none";
+			} 
+			divsArray[0].style.display="inline-block";
+			divsArray[1].style.display="inline-block";
+		}
+		
 
 		var settingsButton = document.querySelector("#settingsButton");
 		var settingsBox = document.querySelector("#settings");
@@ -80,9 +100,10 @@
 			}
 		});
 
-		var startAudioButton = document.querySelector("#play-audio");
+		var startAudioButton = document.querySelector("#play-audio-first");
 		var stopAudioButton = document.querySelector("#stop-audio");
-		
+		var playAudioButton = document.querySelector("#play-audio");
+
 		startAudioButton.addEventListener("click", function() {
 				startAudioButton.setAttribute("style", "display:none;");
 				if (ABCJS.synth.supportsAudio()) {
@@ -98,7 +119,7 @@
 						navigator.msAudioContext;
 					var audioContext = new window.AudioContext();
 					audioContext.resume().then(function () {
-
+						console.log("3");
 						// In theory the AC shouldn't start suspended because it is being initialized in a click handler, but iOS seems to anyway.
 
 						// This does a bare minimum so this object could be created in advance, or whenever convenient.
@@ -116,6 +137,9 @@
 						}).then(function () {
 							// At this point, everything slow has happened. midiBuffer.start will return very quickly and will start playing very quickly without lag.
 							midiBuffer.start();
+							timingCallbacks.start();
+							fixBugOnDiv();
+							console.log("4");
 							return Promise.resolve();
 						}).catch(function (error) {
 							if (error.status === "NotSupported") {
@@ -131,20 +155,44 @@
 					audioError.setAttribute("style", "");
 				}
 			});
-
-
+			console.log("5");
+			playAudioButton.addEventListener("click", function() {
+				playAudioButton.setAttribute("style", "display:none");
+				stopAudioButton.setAttribute("style", "");
+				if (midiBuffer)
+					midiBuffer.start();
+					fixBugOnDiv();
+					console.log("6: " + divsCount);
+					timingCallbacks.start();
+			});
 			stopAudioButton.addEventListener("click", function() {
-				startAudioButton.setAttribute("style", "");
+				playAudioButton.setAttribute("style", "");
 				stopAudioButton.setAttribute("style", "display:none;");
 				if (midiBuffer)
 					midiBuffer.pause();
+					timingCallbacks.stop();
 			});
 		}
-	
 
-	function nextLine() 
+	function fixBugOnDiv()
 	{
-		console.log("1");
+		divsCount = divsCount - 1;
+		console.log("9");
+	}
+
+
+	function nextDiv() {
+		if(divsCount > 0)
+			divsArray[divsCount-1].style.display="none";
+		divsArray[divsCount+1].style.display="inline-block";
+		divsCount = divsCount+1;
+	}
+	function lineEndCallback(info,event,details) 
+	{
+		nextDiv();
+		console.log("7");
+		console.log(divsArray);
+		console.log(divsCount);
 	}
     function readTextFile(file)
     {
