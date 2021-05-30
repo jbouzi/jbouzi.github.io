@@ -35,7 +35,9 @@
 	  </a>
 	</nav>
 	<div id="audio"></div>
+	<div id="moveUp" onclick="previousDiv()"><i class="material-icons">expand_less</i></div>
 	<div id="notationBb"></div>
+	<div id="moveDown" onclick="nextDiv()"><i class="material-icons">expand_more</i></div>
 
 <div style="visibility:hidden; border: 1px solid rgb(150, 140, 140)" id="notationC"></div>
 <div style="visibility:hidden;" id="settings">
@@ -147,14 +149,12 @@
 					audioError.setAttribute("style", "");
 				}
 			});
-			console.log("5");
 			playAudioButton.addEventListener("click", function() {
 				playAudioButton.setAttribute("style", "display:none");
 				stopAudioButton.setAttribute("style", "");
 				if (midiBuffer)
 					midiBuffer.start();
 					fixBugOnDiv();
-					console.log("6: " + divsCount);
 					timingCallbacks.start();
 			});
 			stopAudioButton.addEventListener("click", function() {
@@ -162,29 +162,39 @@
 				stopAudioButton.setAttribute("style", "display:none;");
 				if (midiBuffer)
 					midiBuffer.pause();
-					timingCallbacks.stop();
+					timingCallbacks.pause();
 			});
 		}
 
 	function fixBugOnDiv()
 	{
 		divsCount = divsCount - 1;
-		console.log("9");
 	}
 
 
 	function nextDiv() {
-		if(divsCount > 0)
+		if(divsCount > 0) {
 			divsArray[divsCount-1].style.display="none";
+			document.querySelector("#moveUp").style.display="inline-block";
+		}
 		divsArray[divsCount+1].style.display="inline-block";
 		divsCount = divsCount+1;
+		console.log(divsCount);
 	}
+
+	function previousDiv() {
+		divsCount = divsCount-1;
+		divsArray[divsCount-1].style.display="inline-block";
+		divsArray[divsCount+1].style.display="none";
+		if(divsCount == 1) {
+			document.querySelector("#moveUp").style.display="none";
+		}
+		console.log(divsCount);
+	}
+
 	function lineEndCallback(info,event,details) 
 	{
 		nextDiv();
-		console.log("7");
-		console.log(divsArray);
-		console.log(divsCount);
 	}
     function readTextFile(file)
     {
