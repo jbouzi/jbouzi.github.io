@@ -70,3 +70,21 @@ a {
 h1 {
     color: #444;
 }
+
+#moveDown {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#moveUp {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display:none;
+}
