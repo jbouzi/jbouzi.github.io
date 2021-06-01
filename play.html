@@ -21,6 +21,10 @@
 		<i class="material-icons nav__icon">play_circle_outline</i>
 		<span class="nav__text">Play</span>
 	  </a>
+	  <a style="display:none;" id="replay-audio" href="#" class="nav__link">
+		<i class="material-icons nav__icon">arrow_back_ios_new</i>
+		<span class="nav__text">Back</span>
+	  </a>
 	  <a href="#" style="display:none;" id="play-audio" class="nav__link">
 		<i class="material-icons nav__icon">play_circle_outline</i>
 		<span class="nav__text">Play</span>
@@ -39,14 +43,13 @@
 	<div id="notationBb"></div>
 	<div id="moveDown" onclick="nextDiv()"><i class="material-icons">expand_more</i></div>
 
-<div style="visibility:hidden; border: 1px solid rgb(150, 140, 140)" id="notationC"></div>
-<div style="visibility:hidden;" id="settings">
-	<form action="play.html" method="get">
-		<input id="songFormInput" type="hidden" name="song" />
-		Bmp: <input id="bpmFormInput" name="tempo" />
-		<input type="submit" value="Change"/>
-	</form>
-</div>
+	<div style="visibility:hidden;" id="settings">
+		<form action="play.html" method="get">
+			<input id="songFormInput" type="hidden" name="song" />
+			Bmp: <input id="bpmFormInput" name="tempo" />
+			<input type="submit" value="Change"/>
+		</form>
+	</div>
 
 <script type="text/javascript">
 	var divsCount = 1;
@@ -97,11 +100,13 @@
 		var startAudioButton = document.querySelector("#play-audio-first");
 		var stopAudioButton = document.querySelector("#stop-audio");
 		var playAudioButton = document.querySelector("#play-audio");
+		var playFromBeginningButton = document.querySelector("#replay-audio");
 
 		startAudioButton.addEventListener("click", function() {
 				startAudioButton.setAttribute("style", "display:none;");
 				if (ABCJS.synth.supportsAudio()) {
 					stopAudioButton.setAttribute("style", "");
+					playFromBeginningButton.setAttribute("style", "");
 
 					// An audio context is needed - this can be passed in for two reasons:
 					// 1) So that you can share this audio context with other elements on your page.
@@ -113,7 +118,6 @@
 						navigator.msAudioContext;
 					var audioContext = new window.AudioContext();
 					audioContext.resume().then(function () {
-						console.log("3");
 						// In theory the AC shouldn't start suspended because it is being initialized in a click handler, but iOS seems to anyway.
 
 						// This does a bare minimum so this object could be created in advance, or whenever convenient.
@@ -133,7 +137,6 @@
 							midiBuffer.start();
 							timingCallbacks.start();
 							fixBugOnDiv();
-							console.log("4");
 							return Promise.resolve();
 						}).catch(function (error) {
 							if (error.status === "NotSupported") {
@@ -164,6 +167,14 @@
 					midiBuffer.pause();
 					timingCallbacks.pause();
 			});
+			playFromBeginningButton.addEventListener("click", function() {
+				midiBuffer.stop();
+				timingCallbacks.stop();
+				midiBuffer.start();
+				timingCallbacks.start();
+				resetDivs();
+				document.querySelector("#moveUp").style.display="none";
+			});
 		}
 
 	function fixBugOnDiv()
@@ -171,7 +182,17 @@
 		divsCount = divsCount - 1;
 	}
 
-
+    function resetDivs() {
+		divsCount = 0;
+		if(divsArray.length > 2) {
+			divsArray.forEach(hideDiv);
+			function hideDiv(item,index) {
+				divs[index].style.display="none";
+			} 
+			divsArray[0].style.display="inline-block";
+			divsArray[1].style.display="inline-block";
+		}
+	}
 	function nextDiv() {
 		if(divsCount > 0) {
 			divsArray[divsCount-1].style.display="none";
