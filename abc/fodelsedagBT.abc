@@ -6,10 +6,10 @@ M:C
 K:G
 L:1/4
 V:1
-%%MIDI transpose=-2
+%%MIDI transpose -2
 G G3/4G/4 G D | B B3/4B/4 B G | d d3/4d/4 e/d/c/B/ | B A3/4A/4 A3/2 B/ |
 c c3/4B/4 A A3/4A/4 | B B3/4A/4 G G3/4G/4 | A A3/4A/4 G/F/E/F/ | G B3/4d/4 G2 |]
 V:2 bass 
-%%MIDI transpose=-2
+%%MIDI transpose -2
 [G,,B,,D,]4 | [G,,B,,D,]4 | [B,,D,G,]4 | [C,E,G,]4 |
 [C,E,G,]4 | [G,,B,,D,]4 | [C,E,G,]4 | [G,,B,,D,]4 |]
