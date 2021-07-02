@@ -189,12 +189,12 @@
 			function hideDiv(item,index) {
 				divs[index].style.display="none";
 			} 
-			divsArray[0].style.display="inline-block";
-			divsArray[1].style.display="inline-block";
 		}
+		divsArray[0].style.display="inline-block";
+		divsArray[1].style.display="inline-block";
 	}
 	function nextDiv() {
-		if(divsCount > 0) {
+		if(divsCount > 0 && divsArray.length > divsCount+1) {
 			divsArray[divsCount-1].style.display="none";
 			document.querySelector("#moveUp").style.display="inline-block";
 		}
