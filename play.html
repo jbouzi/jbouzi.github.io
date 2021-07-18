@@ -9,14 +9,44 @@
 	<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="js/abcjs-basic-min.js" type="text/javascript"></script>
+	<!-- Include the compiled Ratchet CSS -->
+	<link href="css/ratchet.min.css" rel="stylesheet">
+	<link href="css/ratchet-theme-ios.min.css" rel="stylesheet">
+	<link href="css/ratchet-addOn.css" rel="stylesheet">
+
+	<!-- Include the compiled Ratchet JS -->
+	<script src="js/ratchet.min.js"></script>
 </head>
 <body onload="load()">
-	
+	<nav class="bar bar-tab">
+		<a class="tab-item active" href="index.html">
+		  <span class="icon icon-home"></span>
+		  <span class="tab-label">Home</span>
+		</a>
+		<a class="tab-item" data-ignore="push" href="#" id="play-audio-first">
+		  <span class="icon icon-play"></span>
+		  <span class="tab-label">Play</span>
+		</a>
+		<a class="tab-item" style="display:none;" href="#" id="replay-audio">
+			<span class="icon icon-back"></span>
+			<span class="tab-label">Rewind</span>
+		</a>
+		<a class="tab-item" style="display:none;" href="#" id="play-audio">
+			<span class="icon icon-play"></span>
+			<span class="tab-label">Play</span>
+		</a>
+		<a class="tab-item" style="display:none;" href="#" id="stop-audio">
+			<span class="icon icon-pause"></span>
+			<span class="tab-label">Pause</span>
+		</a>
+		<a class="tab-item" href="settings.html">
+		  <span class="icon icon-gear"></span>
+		  <span class="tab-label">Settings</span>
+		</a>
+	  </nav>
+		<!--
 	<nav class="nav">
-	  <a href="index.html" class="nav__link">
-		<i class="material-icons nav__icon">library_music</i>
-		<span class="nav__text">Songs</span>
-	  </a>
+
 	  <a href="#" id="play-audio-first" class="nav__link">
 		<i class="material-icons nav__icon">play_circle_outline</i>
 		<span class="nav__text">Play</span>
@@ -38,6 +68,7 @@
 		<span class="nav__text">Settings</span>
 	  </a>
 	</nav>
+-->
 	<div id="audio"></div>
 	<div id="moveUp" onclick="previousDiv()"><i class="material-icons">expand_less</i></div>
 	<div id="notationBb"></div>
@@ -85,17 +116,6 @@
 			divsArray[0].style.display="inline-block";
 			divsArray[1].style.display="inline-block";
 		}
-		
-
-		var settingsButton = document.querySelector("#settingsButton");
-		var settingsBox = document.querySelector("#settings");
-		settingsButton.addEventListener("click", function() {
-			if(settingsBox.getAttribute("style") == "") {
-				settingsBox.setAttribute("style","visibility:hidden;");
-			}else{
-				settingsBox.setAttribute("style","");
-			}
-		});
 
 		var startAudioButton = document.querySelector("#play-audio-first");
 		var stopAudioButton = document.querySelector("#stop-audio");

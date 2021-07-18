@@ -1,9 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8'>
-	<meta http-equiv="content-type" content="text/html" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>Play Along</title>
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />  
@@ -14,38 +13,100 @@
 	<meta name="apple-mobile-web-app-title" content="Play Along"> 
 	<meta name="msapplication-TileImage" content="images/144.png">  
 	<meta name="msapplication-TileColor" content="#FFFFFF">
-	<link href="css/abcjs-audio.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="js/abcjs-basic-min.js" type="text/javascript"></script>
-        <style>
-          body {padding-bottom:140px}
-        </style>
-</head>
-<body onload="load()">
-	<div style="width:100%;text-align:center;">
-		<img src="images/128.png" width="128px" /><br />
-		<h1>Play Along Bb Trumpet</h1>
-	</div>
-		<div class="sectionDivider">Exercises</div>
-		<a href="play.html?song=lipSlur1"><div class="songLinkDiv">Lip Slur Exercise I</div></a>
-		<a href="play.html?song=lipSlur2"><div class="songLinkDiv">Lip Slur Exercise II</div></a>
-		<a href="play.html?song=lipSlur3"><div class="songLinkDiv">Lip Slur Exercise III</div></a>
-		<a href="play.html?song=lipSlur4"><div class="songLinkDiv">Lip Slur Exercise IV</div></a>
-		<div class="sectionDivider">Songs</div>
-		<a href="play.html?song=air"><div class="songLinkDiv">Air - Bach</div></a>
-		<a href="play.html?song=amazingGrace"><div class="songLinkDiv">Amazing Grace - Trad</div></a>
-		<a href="play.html?song=auldLangSyne"><div class="songLinkDiv">Auld Lang Syne - Robert Burns</div></a>
-		<a href="play.html?song=aveMaria"><div class="songLinkDiv">Ave Maria - Bach-Gounod</div></a>
-		<a href="play.html?song=gymnopedie1"><div class="songLinkDiv">Gymnopedie 1 - Erik Satie</div></a>
-		<a href="play.html?song=havaNagila"><div class="songLinkDiv">Hava Nagila - Trad</div></a>
-		<a href="play.html?song=fodelsedag"><div class="songLinkDiv">Ja m&aring; han leva</div></a>
-		<a href="play.html?song=natureBoy"><div class="songLinkDiv">Nature Boy</div></a>
-		<a href="play.html?song=pippi"><div class="songLinkDiv">Pippi L&aring;ngstrum - Jan Johansson</div></a>
-		<a href="play.html?song=summertime"><div class="songLinkDiv">Summertime - Hayward &amp; Gershwin</div></a>
-                <a href="play.html?song=godfather"><div class="songLinkDiv">The Godfather - Nino Rota</div></a>
 
+    <!-- Include the compiled Ratchet CSS -->
+	<link href="css/ratchet.min.css" rel="stylesheet">
+    <link href="css/ratchet-theme-ios.min.css" rel="stylesheet">
+	<link href="css/ratchet-addOn.css" rel="stylesheet">
 
-<script src="js/main.js"></script>
-</body>
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.min.js"></script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 class="title">Play Along</h1>
+    </header>
+
+	<nav class="bar bar-tab">
+		<a class="tab-item active" href="index.html">
+		  <span class="icon icon-home"></span>
+		  <span class="tab-label">Home</span>
+		</a>
+		<a class="tab-item" href="#">
+		  <span class="icon icon-star-filled"></span>
+		  <span class="tab-label">Favorites</span>
+		</a>
+		<a class="tab-item" href="#">
+		  <span class="icon icon-gear"></span>
+		  <span class="tab-label">Settings</span>
+		</a>
+	  </nav>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+	  <p class="content-padded">Easy Songs</p>
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+			<a href="play.html?song=amazingGrace" data-ignore="push" class="navigate-right">Amazing Grace<p>John Newton</p></a>
+          </li>
+		  <li class="table-view-cell">
+			<a href="play.html?song=fodelsedag" data-ignore="push" class="navigate-right">Ja m&aring; han leva<p>Trad.</p></a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=natureBoy" data-ignore="push" class="navigate-right">Nature Boy<p>Eden Ahbez</p></a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=pippi" data-ignore="push" class="navigate-right">Pippi L&aring;ngstrum<p>Jan Johansson</p></a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=summertime" data-ignore="push" class="navigate-right">Summertime<p>Hayward &amp; Gershwin</p></a>
+          </li>
+        </ul>
+      </div>
+	  <p class="content-padded">More advanced songs</p>
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+			<a href="play.html?song=air" data-ignore="push" class="navigate-right">Air<p>Bach</p></a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=auldLangSyne" data-ignore="push" class="navigate-right">Auld Lang Syne<p>Robert Burns</p></a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=aveMaria" data-ignore="push" class="navigate-right">Ave Maria<p>Bach-Gounod</p></a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=gymnopedie1" data-ignore="push" class="navigate-right">Gymnopedie 1<p>Erik Satie</p></a>
+          </li>
+		  <li class="table-view-cell">
+			<a href="play.html?song=havaNagila" data-ignore="push" class="navigate-right">Hava Nagila<p>Trad.</p></a>
+          </li>
+		  <li class="table-view-cell">
+			<a href="play.html?song=godfather" data-ignore="push" class="navigate-right">The Godfather<p>Nino Rota</p></a>
+          </li>
+        </ul>
+      </div>
+	  <p class="content-padded">Lip Slur Exercises</p>
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">
+			<a href="play.html?song=lipSlur1" data-ignore="push" class="navigate-right">Lip Slur Exercise I</a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=lipSlur2" data-ignore="push" class="navigate-right">Lip Slur Exercise II</a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=lipSlur3" data-ignore="push" class="navigate-right">Lip Slur Exercise III</a>
+          </li>
+          <li class="table-view-cell">
+			<a href="play.html?song=lipSlur4" data-ignore="push" class="navigate-right">Lip Slur Exercise IV</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
 </html>
