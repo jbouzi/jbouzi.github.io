@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" href="images/152.png">   
 	<meta name="theme-color" content="white"/>  
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#FFF"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="#f7f7f7fa"> 
 	<meta name="apple-mobile-web-app-title" content="Play Along"> 
 	<meta name="msapplication-TileImage" content="images/144.png">  
 	<meta name="msapplication-TileColor" content="#FFFFFF">
@@ -28,7 +28,7 @@
     <header class="bar bar-nav">
       <h1 class="title">Play Along</h1>
     </header>
-
+<!--
 	<nav class="bar bar-tab">
 		<a class="tab-item active" href="index.html">
 		  <span class="icon icon-home"></span>
@@ -43,12 +43,12 @@
 		  <span class="tab-label">Settings</span>
 		</a>
 	  </nav>
-
+  -->
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-	  <p class="content-padded">Easy Songs</p>
       <div class="card">
         <ul class="table-view">
+          <li class="table-view-cell"><h3>Easy songs</h3></li>
           <li class="table-view-cell">
 			<a href="play.html?song=amazingGrace" data-ignore="push" class="navigate-right">Amazing Grace<p>John Newton</p></a>
           </li>
@@ -66,10 +66,11 @@
           </li>
         </ul>
       </div>
-	  <p class="content-padded">More advanced songs</p>
       <div class="card">
         <ul class="table-view">
-          <li class="table-view-cell">
+         
+            <li class="table-view-cell"><h3>Next level songs</h3></li>
+            <li class="table-view-cell">
 			<a href="play.html?song=air" data-ignore="push" class="navigate-right">Air<p>Bach</p></a>
           </li>
           <li class="table-view-cell">
@@ -89,10 +90,11 @@
           </li>
         </ul>
       </div>
-	  <p class="content-padded">Lip Slur Exercises</p>
       <div class="card">
         <ul class="table-view">
-          <li class="table-view-cell">
+
+            <li class="table-view-cell"><h3>Lip Slur Exercises</h3></li>
+            <li class="table-view-cell">
 			<a href="play.html?song=lipSlur1" data-ignore="push" class="navigate-right">Lip Slur Exercise I</a>
           </li>
           <li class="table-view-cell">

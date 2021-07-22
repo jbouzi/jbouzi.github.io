@@ -39,7 +39,7 @@
 			<span class="icon icon-pause"></span>
 			<span class="tab-label">Pause</span>
 		</a>
-		<a class="tab-item" href="settings.html">
+		<a class="tab-item" href="#settingsModal">
 		  <span class="icon icon-gear"></span>
 		  <span class="tab-label">Settings</span>
 		</a>
@@ -69,18 +69,55 @@
 	  </a>
 	</nav>
 -->
+<div id="settingsModal" class="modal">
+	<header class="bar bar-nav">
+	  <a class="icon icon-close pull-right" href="#settingsModal"></a>
+	  <h1 class="title">Settings</h1>
+	</header>
+	<div class="content">
+		<div class="card">
+			<ul class="table-view">
+				<li class="table-view-cell"><h3>Tempo</h3></li>
+				<li class="table-view-cell">
+					<form action="play.html" method="post">
+						<input type="text" id="bpmFormInput" placeholder="Bmp" name="tempo">
+						<input type="hidden" id="songFormInput" name="song">
+						<button class="btn btn-default btn-block">Change tempo</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+		<div class="card">
+			<ul class="table-view">
+				<li class="table-view-cell"><h3>Instrument</h3></li>
+			  <li class="table-view-cell">
+				<a href="#">
+					Piano
+					<p>No transpose, will show sheets as leadsheets with melody and chords.</p>
+				</a>
+			  </li>
+			  <li class="table-view-cell selected">
+				<a href="#">
+					Bb Trumpet
+					<p>All sheet music will be transposed +2. Will display melody but no chords.</p>
+				</a>
+			  </li>
+			  <li class="table-view-cell">
+				<a href="#">
+					Alto Sax
+					<p>All sheet music will be transposed +5. Will display melody but no chords.</p>
+				</a>
+			  </li>
+			</ul>
+		  </div>
+	</div>
+  </div>
 	<div id="audio"></div>
 	<div id="moveUp" onclick="previousDiv()"><i class="material-icons">expand_less</i></div>
 	<div id="notationBb"></div>
 	<div id="moveDown" onclick="nextDiv()"><i class="material-icons">expand_more</i></div>
 
-	<div style="visibility:hidden;" id="settings">
-		<form action="play.html" method="get">
-			<input id="songFormInput" type="hidden" name="song" />
-			Bmp: <input id="bpmFormInput" name="tempo" />
-			<input type="submit" value="Change"/>
-		</form>
-	</div>
+
 
 <script type="text/javascript">
 	var divsCount = 1;
