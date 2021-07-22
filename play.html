@@ -16,10 +16,12 @@
 
 	<!-- Include the compiled Ratchet JS -->
 	<script src="js/ratchet.min.js"></script>
+
+    <script src="js/instrument.js"></script>
 </head>
 <body onload="load()">
 	<nav class="bar bar-tab">
-		<a class="tab-item active" href="index.html">
+		<a data-ignore="push" class="tab-item active" href="index.html">
 		  <span class="icon icon-home"></span>
 		  <span class="tab-label">Home</span>
 		</a>
@@ -27,19 +29,19 @@
 		  <span class="icon icon-play"></span>
 		  <span class="tab-label">Play</span>
 		</a>
-		<a class="tab-item" style="display:none;" href="#" id="replay-audio">
+		<a class="tab-item" data-ignore="push" style="display:none;" href="#" id="replay-audio">
 			<span class="icon icon-back"></span>
 			<span class="tab-label">Rewind</span>
 		</a>
-		<a class="tab-item" style="display:none;" href="#" id="play-audio">
+		<a class="tab-item" data-ignore="push" style="display:none;" href="#" id="play-audio">
 			<span class="icon icon-play"></span>
 			<span class="tab-label">Play</span>
 		</a>
-		<a class="tab-item" style="display:none;" href="#" id="stop-audio">
+		<a class="tab-item" data-ignore="push" style="display:none;" href="#" id="stop-audio">
 			<span class="icon icon-pause"></span>
 			<span class="tab-label">Pause</span>
 		</a>
-		<a class="tab-item" href="#settingsModal">
+		<a class="tab-item" data-ignore="push" href="#settingsModal">
 		  <span class="icon icon-gear"></span>
 		  <span class="tab-label">Settings</span>
 		</a>
@@ -71,7 +73,7 @@
 -->
 <div id="settingsModal" class="modal">
 	<header class="bar bar-nav">
-	  <a class="icon icon-close pull-right" href="#settingsModal"></a>
+	  <a class="icon icon-close pull-right" data-ignore="push" href="#settingsModal"></a>
 	  <h1 class="title">Settings</h1>
 	</header>
 	<div class="content">
@@ -79,9 +81,9 @@
 			<ul class="table-view">
 				<li class="table-view-cell"><h3>Tempo</h3></li>
 				<li class="table-view-cell">
-					<form action="play.html" method="post">
+					<form action="play.html" method="get">
 						<input type="text" id="bpmFormInput" placeholder="Bmp" name="tempo">
-						<input type="hidden" id="songFormInput" name="song">
+						<input type="hidden" id="songFormInput" name="song" value="">
 						<button class="btn btn-default btn-block">Change tempo</button>
 					</form>
 				</li>
@@ -90,20 +92,20 @@
 		<div class="card">
 			<ul class="table-view">
 				<li class="table-view-cell"><h3>Instrument</h3></li>
-			  <li class="table-view-cell">
-				<a href="#">
+			  <li id="selectInstrumentPiano"  class="table-view-cell">
+				<a href="#" data-ignore="push" onclick="setInstrument('Piano')">
 					Piano
 					<p>No transpose, will show sheets as leadsheets with melody and chords.</p>
 				</a>
 			  </li>
-			  <li class="table-view-cell selected">
-				<a href="#">
+			  <li id="selectInstrumentTrumpet" class="table-view-cell">
+				<a href="#" data-ignore="push" onclick="setInstrument('Trumpet')">
 					Bb Trumpet
 					<p>All sheet music will be transposed +2. Will display melody but no chords.</p>
 				</a>
 			  </li>
-			  <li class="table-view-cell">
-				<a href="#">
+			  <li id="selectInstrumentAltosax"  class="table-view-cell">
+				<a href="#" data-ignore="push" onclick="setInstrument('Altosax')">
 					Alto Sax
 					<p>All sheet music will be transposed +5. Will display melody but no chords.</p>
 				</a>
@@ -124,22 +126,21 @@
 	var divsArray = [];
 
 	function load() {
+		let instrument = getInstrument();
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const song = urlParams.get('song');
 		document.getElementById("songFormInput").value = song;
 		const tempo = urlParams.get('tempo');
 		document.getElementById("bpmFormInput").value = tempo;
-		var fileContentBb = readTextFile("abc/"+ song + ".abc");
+		var fileContentBb = readTextFile("abc/"+ song + instrument + ".abc");
 		var fileContentC = readTextFile("abc/"+ song + "BT.abc");
 		if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
 		if(tempo != null) {fileContentC = fileContentC.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
 
 		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize', oneSvgPerLine: true})[0];
 		var visualObjC = ABCJS.renderAbc('*', fileContentC, {responsive: 'resize'})[0];
-		console.log("1");
 		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjC, {lineEndCallback: lineEndCallback,});
-		console.log("2");
 		var midiBuffer;
 		var divsCount = 0;
 
@@ -232,6 +233,7 @@
 				resetDivs();
 				document.querySelector("#moveUp").style.display="none";
 			});
+			setSelectedInstrument(getInstrument());
 		}
 
 	function fixBugOnDiv()
@@ -257,7 +259,6 @@
 		}
 		divsArray[divsCount+1].style.display="inline-block";
 		divsCount = divsCount+1;
-		console.log(divsCount);
 	}
 
 	function previousDiv() {
@@ -267,7 +268,6 @@
 		if(divsCount == 1) {
 			document.querySelector("#moveUp").style.display="none";
 		}
-		console.log(divsCount);
 	}
 
 	function lineEndCallback(info,event,details) 
