@@ -7,8 +7,8 @@ K:Eb
 L:1/4
 V:1
 %%MIDI transpose -2
-%%MIDI program 41
-G,/ | C/(E/4D/4E/4F/4) (G/c/)G | (B/=A/)F/ (B/=A/)F/ | C/(E/4D/4E/4F/4) (G/c/)G | (B/=A/)F/ G G,/ | 
-C/(E/4D/4E/4F/4) (G/c/)G | B3/4 (c/4B/4c/4) =A/F/(C/4D/4) | E (D/4C/4) D/C/B,/ | C3/2-C/ z/ G,/ | C/(E/4D/4E/4F/4) (G/c/)G |
-(B/=A/)F/ (B/=A/)F/ | C/(E/4D/4E/4F/4) (G/c/)G | (B/=A/)F/ G G,/ | C/(E/4D/4E/4F/4) (G/c/)G |
+%%MIDI program 57
+G,/ | C/(E/4D/4E/4F/4) (G/c/)G/ | (B/=A/)F/ (B/=A/)F/ | C/(E/4D/4E/4F/4) (G/c/)G/ | (B/=A/)F/ G G,/ | 
+C/(E/4D/4E/4F/4) (G/c/)G/ | B3/4 (c/4B/4c/4) =A/F/(C/4D/4) | E (D/4C/4) D/C/B,/ | C3/2-C/ z/ G,/ | C/(E/4D/4E/4F/4) (G/c/)G/ |
+(B/=A/)F/ (B/=A/)F/ | C/(E/4D/4E/4F/4) (G/c/)G/ | (B/=A/)F/ G G,/ | C/(E/4D/4E/4F/4) (G/c/)G/ |
 B3/4 (c/4B/4c/4) (e/4d/4)c/(C/4D/4) | E (D/4C/4) D/C/B,/ | C3/2-C/ (C/4D/4) | E (D/4C/4) F/D3/4B,/4 | C/ z/ z/ z3/2 |]
