@@ -6,7 +6,7 @@ M:C
 K:G
 L:1/4
 V:1
-%%MIDI transpose 2
+%%MIDI transpose -2
 D/ | G/A/"G7"^A/B/- B/D/G/A/ | ^A/B/"C7"c/_B/- B3/2 D/ | G/A/"G7"^A/B/- B/D/G/=A/ | 
 ^A/B/ "G7"z/ D/ G/A/ _B | z/ D/ "C7"G/A/ ^A/B/c/_B/- | B4 |
 D/ "G7"G/A/ ^A/ B D/ | G/A/"Bm7"^A/B/- B/"E7"D/G/A/ | ^A/B/c/D/ "Am7"^D/E/^E/F/- |
