@@ -91,11 +91,7 @@
 	</div>
   </div>
 	<div id="audio"></div>
-	<div id="moveUp" onclick="previousDiv()"><i class="material-icons">expand_less</i></div>
 	<div id="notationBb"></div>
-	<div id="moveDown" onclick="nextDiv()"><i class="material-icons">expand_more</i></div>
-
-
 
 <script type="text/javascript">
 	var divsCount = 1;
@@ -112,8 +108,7 @@
 		var fileContentBb = readTextFile("abc/"+ song + ".abc");
 		if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
 
-		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize', oneSvgPerLine: false})[0];
-		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjBb, {lineEndCallback: lineEndCallback,});
+		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize'})[0];
 		var midiBuffer;
 
 		var startAudioButton = document.querySelector("#play-audio-first");
