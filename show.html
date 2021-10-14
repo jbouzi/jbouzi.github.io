@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Play Along</title>
+	<link href="css/abcjs-audio.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="js/abcjs-basic-min.js" type="text/javascript"></script>
+	<!-- Include the compiled Ratchet CSS -->
+	<link href="css/ratchet.min.css" rel="stylesheet">
+	<link href="css/ratchet-theme-ios.min.css" rel="stylesheet">
+	<link href="css/ratchet-addOn.css" rel="stylesheet">
+
+	<!-- Include the compiled Ratchet JS -->
+	<script src="js/ratchet.min.js"></script>
+
+    <script src="js/instrument.js"></script>
+</head>
+<body onload="load()">
+	<nav class="bar bar-tab">
+		<a data-ignore="push" class="tab-item active" href="index.html">
+		  <span class="icon icon-home"></span>
+		  <span class="tab-label">Home</span>
+		</a>
+		<a class="tab-item" data-ignore="push" href="#" id="play-audio-first">
+		  <span class="icon icon-play"></span>
+		  <span class="tab-label">Play</span>
+		</a>
+		<a class="tab-item" data-ignore="push" style="display:none;" href="#" id="replay-audio">
+			<span class="icon icon-back"></span>
+			<span class="tab-label">Rewind</span>
+		</a>
+		<a class="tab-item" data-ignore="push" style="display:none;" href="#" id="play-audio">
+			<span class="icon icon-play"></span>
+			<span class="tab-label">Play</span>
+		</a>
+		<a class="tab-item" data-ignore="push" style="display:none;" href="#" id="stop-audio">
+			<span class="icon icon-pause"></span>
+			<span class="tab-label">Pause</span>
+		</a>
+		<a class="tab-item" data-ignore="push" href="#settingsModal">
+		  <span class="icon icon-gear"></span>
+		  <span class="tab-label">Settings</span>
+		</a>
+	  </nav>
+
+<div id="settingsModal" class="modal">
+	<header class="bar bar-nav">
+	  <a class="icon icon-close pull-right" data-ignore="push" href="#settingsModal"></a>
+	  <h1 class="title">Settings</h1>
+	</header>
+	<div class="content">
+		<div class="card">
+			<ul class="table-view">
+				<li class="table-view-cell"><h3>Tempo</h3></li>
+				<li class="table-view-cell">
+					<form action="play.html" method="get">
+						<input type="text" id="bpmFormInput" placeholder="Bmp" name="tempo">
+						<input type="hidden" id="songFormInput" name="song" value="">
+						<button class="btn btn-default btn-block">Change tempo</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+		<div class="card">
+			<ul class="table-view">
+				<li class="table-view-cell"><h3>Instrument</h3></li>
+			  <li id="selectInstrumentPiano"  class="table-view-cell">
+				<a href="#" data-ignore="push" onclick="setInstrument('Piano')">
+					Piano
+					<p>No transpose, will show sheets as leadsheets with melody and chords.</p>
+				</a>
+			  </li>
+			  <li id="selectInstrumentTrumpet" class="table-view-cell">
+				<a href="#" data-ignore="push" onclick="setInstrument('Trumpet')">
+					Bb Trumpet
+					<p>All sheet music will be transposed +2. Will display melody but no chords.</p>
+				</a>
+			  </li>
+			  <li id="selectInstrumentAltosax"  class="table-view-cell">
+				<a href="#" data-ignore="push" onclick="setInstrument('Altosax')">
+					Alto Sax
+					<p>All sheet music will be transposed +5. Will display melody but no chords.</p>
+				</a>
+			  </li>
+			</ul>
+		  </div>
+	</div>
+  </div>
+	<div id="audio"></div>
+	<div id="moveUp" onclick="previousDiv()"><i class="material-icons">expand_less</i></div>
+	<div id="notationBb"></div>
+	<div id="moveDown" onclick="nextDiv()"><i class="material-icons">expand_more</i></div>
+
+
+
+<script type="text/javascript">
+	var divsCount = 1;
+	var divsArray = [];
+
+	function load() {
+		let instrument = getInstrument();
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const song = urlParams.get('song');
+		document.getElementById("songFormInput").value = song;
+		const tempo = urlParams.get('tempo');
+		document.getElementById("bpmFormInput").value = tempo;
+		var fileContentBb = readTextFile("abc/"+ song + ".abc");
+		if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
+
+		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize', oneSvgPerLine: false})[0];
+		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjBb, {lineEndCallback: lineEndCallback,});
+		var midiBuffer;
+
+		var startAudioButton = document.querySelector("#play-audio-first");
+		var stopAudioButton = document.querySelector("#stop-audio");
+		var playAudioButton = document.querySelector("#play-audio");
+		var playFromBeginningButton = document.querySelector("#replay-audio");
+
+		startAudioButton.addEventListener("click", function() {
+				startAudioButton.setAttribute("style", "display:none;");
+				if (ABCJS.synth.supportsAudio()) {
+					stopAudioButton.setAttribute("style", "");
+					playFromBeginningButton.setAttribute("style", "");
+
+					// An audio context is needed - this can be passed in for two reasons:
+					// 1) So that you can share this audio context with other elements on your page.
+					// 2) So that you can create it during a user interaction so that the browser doesn't block the sound.
+					// Setting this is optional - if you don't set an audioContext, then abcjs will create one.
+					window.AudioContext = window.AudioContext ||
+						window.webkitAudioContext ||
+						navigator.mozAudioContext ||
+						navigator.msAudioContext;
+					var audioContext = new window.AudioContext();
+					audioContext.resume().then(function () {
+						// In theory the AC shouldn't start suspended because it is being initialized in a click handler, but iOS seems to anyway.
+
+						// This does a bare minimum so this object could be created in advance, or whenever convenient.
+						midiBuffer = new ABCJS.synth.CreateSynth();
+
+						// midiBuffer.init preloads and caches all the notes needed. There may be significant network traffic here.
+						return midiBuffer.init({
+							visualObj: visualObjBb,
+							audioContext: audioContext,
+							millisecondsPerMeasure: visualObjBb.millisecondsPerMeasure()
+						}).then(function (response) {
+							// console.log(response); // this contains the list of notes that were loaded.
+							// midiBuffer.prime actually builds the output buffer.
+							return midiBuffer.prime();
+						}).then(function () {
+							// At this point, everything slow has happened. midiBuffer.start will return very quickly and will start playing very quickly without lag.
+							midiBuffer.start();
+							timingCallbacks.start();
+							return Promise.resolve();
+						}).catch(function (error) {
+							if (error.status === "NotSupported") {
+								stopAudioButton.setAttribute("style", "display:none;");
+								var audioError = document.querySelector(".audio-error");
+								audioError.setAttribute("style", "");
+							} else
+								console.warn("synth error", error);
+						});
+					});
+				} else {
+					var audioError = document.querySelector(".audio-error");
+					audioError.setAttribute("style", "");
+				}
+			});
+			playAudioButton.addEventListener("click", function() {
+				playAudioButton.setAttribute("style", "display:none");
+				stopAudioButton.setAttribute("style", "");
+				if (midiBuffer)
+					midiBuffer.start();
+					fixBugOnDiv();
+					timingCallbacks.start();
+			});
+			stopAudioButton.addEventListener("click", function() {
+				playAudioButton.setAttribute("style", "");
+				stopAudioButton.setAttribute("style", "display:none;");
+				if (midiBuffer)
+					midiBuffer.pause();
+					timingCallbacks.pause();
+			});
+			playFromBeginningButton.addEventListener("click", function() {
+				midiBuffer.stop();
+				timingCallbacks.stop();
+				midiBuffer.start();
+				timingCallbacks.start();
+				resetDivs();
+				document.querySelector("#moveUp").style.display="none";
+			});
+		}
+
+
+
+    function readTextFile(file)
+    {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+		var texten = "";
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    texten = rawFile.responseText;
+                }
+            }
+        }
+		rawFile.send(null);
+		return texten;
+    }
+	
+
+</script>
+
+</body>
+</html>
