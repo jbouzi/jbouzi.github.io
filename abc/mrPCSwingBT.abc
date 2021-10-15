@@ -8,6 +8,7 @@ L:1/4
 V:1
 %%MIDI transpose 2
 %%MIDI program 57
+%%MIDI trim 1/8
 z4 |: (3:2:2D2D (3:2:2E2E (3:2:2F2F (3:2:2G2G | A3/2 G/ F/D/ z/ C/ | D2 C3/2 D/- | D z z2 |
 G/G/A/A/ B/B/c/c/ | d3/2 c/ A/G/ z/ E/ | D2 C3/2 D/- | D z F/D/F/_A/ |
 z/ G3/2- G3/2 _A/ | z/ G F/ G .F | D2 C3/2 D/- | D z z2 :|
