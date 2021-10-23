@@ -1,7 +1,6 @@
 var cacheName = 'playAlong';
 var filesToCache = [
   '/',
-  '/index.html',
   '/play.html',
   '/css/style.css',
   '/js/main.js',
