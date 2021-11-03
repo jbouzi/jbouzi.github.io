@@ -184,3 +184,6 @@
 .abcjs-css-warning {
 	display: none;
 }
+.abcjs-highlight {
+	fill: #ff0000;
+}
