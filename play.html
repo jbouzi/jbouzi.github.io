@@ -159,7 +159,7 @@
 		var stopAudioButton = document.querySelector("#stop-audio");
 		var playAudioButton = document.querySelector("#play-audio");
 		var playFromBeginningButton = document.querySelector("#replay-audio");
-		var cursorControl = new CursorControl("#notationBb");
+		
 
 		startAudioButton.addEventListener("click", function() {
 				startAudioButton.setAttribute("style", "display:none;");
@@ -264,7 +264,8 @@
 		self.onFinished = function() {
 			self.removeSelection();
 		};
-	}	
+	}
+	var cursorControl = new CursorControl("#notationBb");
 	function fixBugOnDiv()
 	{
 		divsCount = divsCount - 1;
