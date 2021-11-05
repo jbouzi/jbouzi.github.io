@@ -90,7 +90,6 @@
 		  </div>
 	</div>
   </div>
-	<div id="audio"></div>
 	<div id="notationBb"></div>
 
 <script type="text/javascript">
@@ -108,7 +107,8 @@
 		var fileContentBb = readTextFile("abc/"+ song + ".abc");
 		if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
 
-		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {responsive: 'resize'})[0];
+		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {add_classes: true, responsive: 'resize'})[0];
+		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjBb, {eventCallback: nextNoteHighlight,});
 		var midiBuffer;
 
 		var startAudioButton = document.querySelector("#play-audio-first");
@@ -190,8 +190,43 @@
 			});
 		}
 
+		function CursorControl(rootSelector) {
+			var self = this;
+			self.rootSelector = rootSelector;
+			self.removeSelection = function() {
+				// Unselect any previously selected notes.
+				var lastSelection = document.querySelectorAll(self.rootSelector + " .abcjs-highlight");
+				for (var k = 0; k < lastSelection.length; k++)
+					lastSelection[k].classList.remove("abcjs-highlight");
+			};
+			self.onEvent = function(ev) {
+				// This is called every time a note or a rest is reached and contains the coordinates of it.
+				if (ev.measureStart && ev.left === null)
+					return; // this was the second part of a tie across a measure line. Just ignore it.
 
+				self.removeSelection();
 
+				// Select the currently selected notes.
+				for (var i = 0; i < ev.elements.length; i++ ) {
+					var note = ev.elements[i];
+					for (var j = 0; j < note.length; j++) {
+						note[j].classList.add("abcjs-highlight");
+					}
+				}
+
+			};
+			self.onFinished = function() {
+				self.removeSelection();
+			};
+		}
+	var cursorControl = new CursorControl("#notationBb");
+
+	function nextNoteHighlight(ev) {
+		if (ev)
+			cursorControl.onEvent(ev);
+		else
+			cursorControl.onFinished();
+	}
     function readTextFile(file)
     {
         var rawFile = new XMLHttpRequest();

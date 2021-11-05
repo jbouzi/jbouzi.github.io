@@ -186,4 +186,6 @@
 }
 .abcjs-highlight {
 	fill: #ff0000;
-}
+} 
+.abcjs-v1 { display: none; }
+.abcjs-v2 { display: none; }
