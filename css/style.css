@@ -1,5 +1,5 @@
 html, body {
-    overflow-x: hidden;
+    overflow: scroll;
     padding: 0px;
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -31,7 +31,7 @@ html, body {
     -webkit-tap-highlight-color: transparent;
     transition: background-color 0.1s ease-in-out;
 }
-
+#notationBb {margin-bottom: 50px;}
 .nav__link:hover {
     background-color: #eeeeee;
 }
