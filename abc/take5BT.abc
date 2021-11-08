@@ -5,7 +5,6 @@ C:Dave Brubeck
 M:5/4
 K:Ab
 L:1/4
-%%score(1 2 3)
 V:1
 %%MIDI transpose -2 
 z5 | 
