@@ -16,8 +16,8 @@ V:3 name="Alto Sax"
 L:1/4
 K:F
 %%MIDI transpose -9
-A B/c/ A B | G2 z c | A A/A/ A A/d/ | d d/_d/ =c z/ A/ |
-B c/A/ B/A/_A/G/ | F G/A/ =B c | A A/A/ A A/d/ | d d/_d/ =c z/ A/ |
+A B/c/ A B | G2 z c | A A/A/ A A/d/ | d d/_d/ c z/ A/ |
+B c/A/ B/A/_A/G/ | F G/A/ =B c | A A/A/ A A/d/ | d d/_d/ c z/ A/ |
 B c/A/ B/A/_A/G/ | F G/B/ A B/c/ | B B/B/ B d/d/ | 
 c c/d/ e c | A2 A A | G2 G A/c/ | 
 B2 c B/A/ | G2 A B | c2 z2 |]
