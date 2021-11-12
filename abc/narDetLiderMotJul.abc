@@ -1,0 +1,26 @@
+X:1
+T:När det lider mot jul
+C:Ruben Liljefors
+K:Bb
+M:4/4
+L:1/4
+V:1 name="Trumpet in Bb 1"
+%%MIDI transpose -2
+d c/A/ B G | A2 z F | d F/A/ c B/d/ | e B/c/ d z/ d/ | 
+c A/B/ G A/^F/ | G2 z =F | d F/A/ c B/d/ | e B/c/ d z/ d/ |
+c A/B/ G A/^F/ | G2 z B | G B/c/ e c/B/ | 
+A c/e/ f d/c/ | B A/G/ A G/F/ | G F/E/ F D/F/ | 
+B3/2 G/ F A/B/ | c2 B A | B2 z2 |] 
+V:3 name="Alto Sax"
+L:1/4
+K:F
+%%MIDI transpose -9
+A B/c/ A B | G2 z c | A A/A/ A A/d/ | d d/^c/ =c z/ A/ |
+B c/A/ B/A/_A/G/ | F G/A/ =B c | A A/A/ A A/d/ | d d/^c/ =c z/ A/ |
+B c/A/ B/A/_A/G/ | F G/B/ A B/c/ | B B/B/ B d/d/ | 
+c c/d/ e c | A2 A A | G2 G A/c/ | B2 c B/A/ | G2 A B | c2 z2 |]
+
+%%MIDI beat 40 20 10 1
+V:2 name="Trumpet in Bb 2"
+L: 1/4
+F G/A/ F G | F2 z F | F F/^F/ A G/B/ | B B/B/ B z/ F/ |
