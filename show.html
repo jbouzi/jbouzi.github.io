@@ -102,12 +102,20 @@
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const song = urlParams.get('song');
+		const v = urlParams.get('voice');
 		document.getElementById("songFormInput").value = song;
 		const tempo = urlParams.get('tempo');
 		document.getElementById("bpmFormInput").value = tempo;
 		var fileContentBb = readTextFile("abc/"+ song + ".abc");
 		if(tempo != null) {fileContentBb = fileContentBb.replace(/Q:.*?\n/i,"Q:1/4="+tempo+"\n")}
+		if(v != null) {
+			const regex =  new RegExp("V:[^"+v+"]((.|\n)*?)(V|$)",'i');
 
+			// Ful lösning! Hur kan man göra en while-loop som inte blir oändling istället?
+			for(i=0;i<5;i++) {
+    			fileContentBb = fileContentBb.replace(regex,'$3');
+			}
+		}
 		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {oneSvgPerLine: true, responsive: 'resize'})[0];
 		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjBb, {eventCallback: nextNoteHighlight,});
 		var midiBuffer;
@@ -169,9 +177,9 @@
 			playAudioButton.addEventListener("click", function() {
 				playAudioButton.setAttribute("style", "display:none");
 				stopAudioButton.setAttribute("style", "");
+				playFromBeginningButton.setAttribute("style", "");
 				if (midiBuffer)
 					midiBuffer.start();
-					fixBugOnDiv();
 					timingCallbacks.start();
 			});
 			stopAudioButton.addEventListener("click", function() {
@@ -182,12 +190,13 @@
 					timingCallbacks.pause();
 			});
 			playFromBeginningButton.addEventListener("click", function() {
+				playAudioButton.setAttribute("style", "display:none;");
+				stopAudioButton.setAttribute("style", "");
 				midiBuffer.stop();
 				timingCallbacks.stop();
+				accD = 0;
 				midiBuffer.start();
 				timingCallbacks.start();
-				resetDivs();
-				document.querySelector("#moveUp").style.display="none";
 			});
 		}
 
@@ -224,6 +233,10 @@
 			};
 			self.onFinished = function() {
 				self.removeSelection();
+				accD=0;
+				document.getElementById("stop-audio").setAttribute("style", "display:none;");
+				document.getElementById("play-audio").setAttribute("style", "");
+				document.getElementById("replay-audio").setAttribute("style", "display:none;");
 			};
 		}
 	var cursorControl = new CursorControl("#notationBb");
