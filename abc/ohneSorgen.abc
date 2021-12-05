@@ -5,7 +5,12 @@ Q:1/4=60
 M:2/4
 K:C
 L:1/4
-V:1
+V:1 name="Trumpet III in Bb" snm="Tpt III"
 %%MIDI transpose -2
 %%MIDI program 61
-D/G/4G/4 G/ z/ | E/G/4G/4 G/ z/ 
+D/G/4G/4 G/ z/ | E/G/4G/4 G/ z/ | F/G/4G/4 G/ z/ | z4 | z/ G/ z/ G/ |  z/ G/ z/ G/ | z/ G/ z/ G/ | z/ G/ z/ G/ | z/ G/ z/ G/ |
+z/ G/ z/ G/ |  z/ G/ z/ G/ | z/ G/G/G/ |  z/ G/ z/ G/ |  z/ G/ z/ G/ | z/ G/G/G/ |
+
+
+
+
