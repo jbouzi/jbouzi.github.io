@@ -4,7 +4,7 @@ html, body {
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-tspan { border: 1px solid #000; }
+text { border: 1px solid #000; }
 .nav {
     position: fixed;
     bottom: 0;
