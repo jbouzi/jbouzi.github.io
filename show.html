@@ -116,7 +116,7 @@
     			fileContentBb = fileContentBb.replace(regex,'$3');
 			}
 		}
-		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {oneSvgPerLine: true, responsive: 'resize'})[0];
+		var visualObjBb = ABCJS.renderAbc('notationBb', fileContentBb, {add_classes:true, oneSvgPerLine: true, responsive: 'resize'})[0];
 		var timingCallbacks = new ABCJS.TimingCallbacks(visualObjBb, {eventCallback: nextNoteHighlight,});
 		var midiBuffer;
 
