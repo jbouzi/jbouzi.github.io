@@ -8,4 +8,4 @@ V:1 name="Trumpet in Bb 1" snm="Tpt 1"
 d/d/d/d/ | f/e/z/d/ AA G2 dd | e/d/z/c/ dB A2 Ac |
 V:2 name="Trumpet in Bb 2" snm="Tpt 2"
 %%MIDI transpose -2
-B/B/B/B/ | d/c/z/B/ ^FF D2 BB | c/E/z/A/ BG ^F2 FA |
+B/B/B/B/ | d/c/z/B/ ^FF D2 BB | c/G/z/A/ BG ^F2 FA |
