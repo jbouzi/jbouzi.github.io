@@ -5,7 +5,9 @@ L:1/8
 Q:1/4=100
 V:1 name="Trumpet in Bb 1" snm="Tpt 1"
 %%MIDI transpose -2
-d/d/d/d/ | f/e/z/d/ AA G2 dd | e/d/z/c/ dB A2 Ac |
+d/d/d/d/ |: f/e/z/d/ AA G2 dd | e/d/z/c/ dB A2 Ac |
+e/d/z/c/ dB A2 D/D/D/D/ | ^F/F/z/D/ FF G2 d/d/d/d/ :|
 V:2 name="Trumpet in Bb 2" snm="Tpt 2"
 %%MIDI transpose -2
-B/B/B/B/ | d/c/z/B/ ^FF D2 BB | c/G/z/A/ BG ^F2 FA |
+B/B/B/B/ |: d/c/z/B/ ^FF D2 BB | c/G/z/A/ BG ^F2 FA |
+c/G/z/A/ BG ^F2 C/C/C/C/ | D/D/z/C/ DD D2 B/B/B/B/ :|
