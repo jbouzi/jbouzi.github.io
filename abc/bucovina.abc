@@ -4,6 +4,8 @@ K:Bb
 L:1/8
 Q:1/4=100
 V:1 name="Trumpet in Bb 1" snm="Tpt 1"
+%%MIDI transpose -2
 d/d/d/d/ | f/e/z/d/ AA G2 dd |
 V:2 name="Trumpet in Bb 2" snm="Tpt 2"
+%%MIDI transpose -2
 B/B/B/B/ |
