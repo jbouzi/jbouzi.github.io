@@ -7,7 +7,8 @@ M:3/4
 L:1/4
 V:1 name="Flöjt 1" snm="Flt 1"
 %%MIDI program 74
-!p! (F3/2 B/A/B/ | d3) | Z17
+!p! (F3/2 B/A/B/ | d3) | (F3/2 B/A/B/ | d3) | (d2/3 B/A/G/ | A2) (D | G2/3 G/^F/G/ | A2) z [P:1] ||
+Z10 |
 V:2 name="Trumpet in Bb 1" snm="Tpt 1"
 %%MIDI transpose -2
 %%MIDI program 57
