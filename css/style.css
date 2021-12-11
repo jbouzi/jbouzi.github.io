@@ -4,7 +4,7 @@ html, body {
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-abcjs-part { outline: 1px solid; }
+.abcjs-part { outline: 1px solid; }
 .nav {
     position: fixed;
     bottom: 0;
