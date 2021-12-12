@@ -1,17 +1,27 @@
 X:1
 T:We'll Meet Again
 M:C
-K:C
 L:1/4
-V:1 name="Trumpet 1 in Bb" snm="Tpt 1"
+V:1 name="Altsax 1" snm="Sax 1"
+%%MIDI transpose -9
+K:F
+D [P:A] | B2 A G/A/- | A2 G F | G2 F E/=F/- | =F3 G |
+e2 d c  | d2 .c/ z/ B/A/- | A4- | A2 B/A/^G/A/ |
+V:2 name="Trumpet 1 in Bb" snm="Tpt 1"
+%%MIDI transpose -2
+K:C
 z [P:A] | Z6 | z/ (B/ ._B) (B/ .A) (A/ | _A3) z | z/ .=B/ z z2 |
 z/ .c A/ B/c/ .d | z/ .B/ z B2 | z/ .e (c/ ^d2) | Z2 |
 z2 (3z/F/E/ (3.F/.A/.c/ | ^d3 z [P:B] |
-V:2 name="Trumpet 2 in Bb" snm="Tpt 2"
+V:3 name="Trumpet 2 in Bb" snm="Tpt 2"
+%%MIDI transpose -2
+K:C
 z [P:A] | Z6 | z/ ^F/ .F F/ .F F/ | =F3 z | z/ .G/ z z2 |
 z/ .A F/ G/A/ .B | z/ G/ z G2 | z/ c (A/ c2) | Z2 |
 z2 (3z/F/E/ (3F/A/c/ | B3 z [P:B] |
-V:3 name="Trumpet 3 in Bb" snm="Tpt 3"
+V:4 name="Trumpet 3 in Bb" snm="Tpt 3"
+%%MIDI transpose -2
+K:C
 z [P:A] | Z6 | z/ D/ .D D/ .D D/ | =F3 z | z/ .E/ z z2 |
 z/ .F D/ F/F/ .G | z/ E/ z E2 | z/ A (^F/ A2) | Z2 |
 z2 (3z/F/E/ (3F/A/c/ | A3 z [P:B] |
