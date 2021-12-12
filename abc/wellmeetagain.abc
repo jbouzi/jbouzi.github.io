@@ -4,5 +4,6 @@ M:C
 K:C
 L:1/4
 V:1 name="Trumpet 1 in Bb" snm="Tpt 1"
-z [P:A] | Z6 | z/ (B/ _B) (B/ A) (A/ | _A3 z | z/ =B/ z z2 |
-z/ c A/ B/c/ d |
+z [P:A] | Z6 | z/ (B/ _B) (B/ A) (A/ | _A3) z | z/ =B/ z z2 |
+z/ c A/ B/c/ d | z/ B/ z B2 | z/ e (c/ ^d2) | Z2 |
+z2 (3z/F/E/) (3F/A/c/) |
