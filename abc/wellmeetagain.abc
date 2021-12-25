@@ -13,7 +13,9 @@ K:C
 z [P:A] | Z6 | z/ (B/ ._B) (B/ .A) (A/ | _A3) z | z/ .=B/ z z2 |
 z/ .c A/ B/c/ .d | z/ .B/ z B2 | z/ .e (c/ ^d2) | Z2 |
 z2 (3z/F/E/ (3.F/.A/.c/ | ^d3 z [P:B] | z/ .G (^F/ .G) z | ^G3/2 .G/ z/ (=G/ .^G) |
-z/ .A (^G/ .A) z | _B3/2 .B/ z/ (A/ .B) |  
+z/ .A (^G/ .A) z | _B3/2 .B/ z/ (A/ .B) | z/ .c (=B/ .c) z | z4 | 
+z/ (B/ ._B) (B/ .A) (A/ | _A) z e f | g2 g3/2 (f/ | f/) d z/ z/ e3/2 | .c .d e/.g/ z | 
+z c'2 a | 
 V:3 name="Trumpet 2 in Bb" snm="Tpt 2"
 %%MIDI transpose -2
 K:C
