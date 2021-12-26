@@ -1,0 +1,27 @@
+X:1
+T:Waltz No. 2
+C:Dmitri Shostakovich
+M:3/4
+K:F
+Q:1/4=174
+V:1 name="Bb Trumpet 3" snm="Tpt 3"
+L:1/4
+Z4 | [P:A]Z8 | [P:B]Z8 | [P:C]Z7 |
+z .D .D | [P:D] z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | 
+z .D .D | z .E .E | .D A A | z A A |  D A A | z A A | [P:E] z .F .F | z .F .F | z !mf! .F .F | 
+z .F .F | z .F .F | z .F .F | z .E .E | z .E .E | [P:F]z .E .E | z .E .E | z .E .E | z .E .E | 
+z .E .E | z .E .E | z .F .F | z .F .F | [P:G]z .F .F | z .F .F | z .D .D | z .D .D | z .E .E | 
+z .E .E | z .F .F | z !f!.D .D | [P:H] z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | 
+z .D .D | z .D .D | z .D .D | z .E .E | z .D .D | .D z B | [P:I] z F F | z F F | z F F | 
+z F F | z B B | z B B | z A A | z A A | [P:J]z ^F F | z ^F F | z G ^F | z =F F | 
+z F F | z E E | z F F | z F F | [P:K] A3 | A3 | (A G F | E C E) | G3 | G3 | 
+(G F E | D A, C) | [P:L] F3 | F3 | F3 | (G F G | A2 F) | (C D E | F) z z | 
+(_E3 | [P:M]D) D D | z D D | z D D | z D D | z _E E | z _E E | z _E E | z _E E |
+[P:N] z D D | z D D | z D D | z D D | z _E E | z D D | z D E | F z z | [P:O] !f!F2 B,- | 
+B,3 | F2 B,- | B, (G F) | (F2 _E) | (D2 _E) | A2 A | (G F =E) | [P:P] F2 B,- | B,3 | F2 B,- |
+B, C2 | _E3 | G2 G | G G G | A3 | "rall."(A2 G) | "a tempo" Z4 | [P:Q] Z8 |
+[P:R] Z8 | [P:S] (A3 | F2 F | E2 D | B,3) | (G3 | F2 E) | (F2 C) | z3 | [P:T] Z10 |
+z !mf! D D | "rall."z !<(!(F E) !<)! | [P:U]z"a tempo"!f!D D | z D D | z D D | z D D | z D D | z D D | z D D | 
+z D D | [P:V] z D D | z D D | z E E | z E E | z E E | z E E | z D D | z D D | 
+[P:W] (A3 | F2 F | E2 D | B,3) | (G3 | F2 E) | (F2 C) | z .D .D | [P:X] z .D .D | z .D .D | 
+z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .E .E | .D z E | D z z |]
