@@ -2,11 +2,14 @@ X:1
 T:We'll Meet Again
 M:C
 L:1/4
-V:1 name="Altsax 1" snm="Sax 1"
-%%MIDI transpose -9
-K:F
-D [P:A] | B2 A G/A/- | A2 G F | G2 F E/=F/- | =F3 G |
-e2 d c  | d2 .c/ z/ B/A/- | A4- | A2 B/A/^G/A/ |
+V:3 name="Trumpet 2 in Bb" snm="Tpt 2"
+%%MIDI transpose -2
+K:C
+z [P:A] | Z6 | z/ ^F/ .F F/ .F F/ | =F3 z | z/ .G/ z z2 |
+z/ .A F/ G/A/ .B | z/ G/ z G2 | z/ c (A/ c2) | Z2 |
+z2 (3z/F/E/ (3F/A/c/ | B3 z [P:B] || z/ .E (^D/.E) z | E3/2 .E/ z/ (^D/.E) |
+z/ .G
+
 V:2 name="Trumpet 1 in Bb" snm="Tpt 1"
 %%MIDI transpose -2
 K:C
@@ -15,13 +18,20 @@ z/ .c A/ B/c/ .d | z/ .B/ z B2 | z/ .e (c/ ^d2) | Z2 |
 z2 (3z/F/E/ (3.F/.A/.c/ | ^d3 z [P:B] | z/ .G (^F/ .G) z | ^G3/2 .G/ z/ (=G/ .^G) |
 z/ .A (^G/ .A) z | _B3/2 .B/ z/ (A/ .B) | z/ .c (=B/ .c) z | z4 | 
 z/ (B/ ._B) (B/ .A) (A/ | _A) z e f | g2 g3/2 (f/ | f/) d z/ z/ e3/2 | .c .d e/.g/ z | 
-z c'2 a | 
-V:3 name="Trumpet 2 in Bb" snm="Tpt 2"
-%%MIDI transpose -2
-K:C
-z [P:A] | Z6 | z/ ^F/ .F F/ .F F/ | =F3 z | z/ .G/ z z2 |
-z/ .A F/ G/A/ .B | z/ G/ z G2 | z/ c (A/ c2) | Z2 |
-z2 (3z/F/E/ (3F/A/c/ | B3 z [P:B] |
+z !>!c'2 a | !>!g2 c a | !>!g2 !>!B2 | !>!c3 z "solo"| !mf! z/ (^c/4B/4 .A/)_A/ G/=A/ (3^F/E/^E/
+[K:D][P:C] || F/^E/F/A/- A PF/E/ | F/ ^A3/2 z/ F/ (3A/d/A/ | F/^E/F/B/- B PF/E/ | 
+F/ =c3/2 z/ e/ (3d/_d/c/ | B D/D/ G/ B A/- | A3/2 c/ .B/A/ (3G/F/=F/ | E4- | E z z2 | 
+Z7 | z2 z A [P:D] || !>!f2 .e d/e/- | e2 z/ .d c/ | d2 .c/ .B =c/- | 
+c3 d | !>!b2 .a .g | !>!a/b/a/!>!g/- g f/e/- | e4 | e z z2 | 
+Z3 | !ff!z/ d c/ d b | !>!a3/2 !>!d/- d b | !>! !>(!a2 !>! !>)!c2 | !>! !f!d3 z | 
+d3/2 !>!d/ z2 |]
+
+V:1 name="Altsax 1" snm="Sax 1"
+%%MIDI transpose -9
+K:F
+D [P:A] | B2 A G/A/- | A2 G F | G2 F E/=F/- | =F3 G |
+e2 d c  | d2 .c/ z/ B/A/- | A4- | A2 B/A/^G/A/ |
+
 V:4 name="Trumpet 3 in Bb" snm="Tpt 3"
 %%MIDI transpose -2
 K:C
