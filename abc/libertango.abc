@@ -3,6 +3,7 @@ T:Libertango
 M:4/4
 K:C
 V:2 name="Bb Trumpet II" snm="Tpt II"
+%%MIDI transpose -2
 L:1/4
 Z16 | Z16 | !mf!E/z/z/F/ z E/ z/ | F/z/z/E/ z F/ z/ | ^F/z/z/F/ z F/ z/ | 
 ^F/z/z/F/ z F/ z/ | =F/z/z/F/ z F/ z/ | =F/z/z/F/ z F/ z/ | E/z/z/E/ z E/ z/ | E/z/z/E/ z E/ z/ | E/z/z/E/ z E/ z/ | E/z/z/E/ z E/ z/ | 
@@ -17,6 +18,7 @@ z/D/ z z z/ D/ | C/z/z/C/ z C/C/ | z2 (3CCC | Z6 || [K:Eb] Z8 || Z8 |
 e4- | e2 d/c/c/G/ | =A4- | A4 | d4- | d3/2 c/ c/=B/G/G/ | G4- | G3 d/e/ |] 
 
 V:1 name="Bb Trumpet I" snm="Tpt I"
+%%MIDI transpose -2
 L:1/4
 Z16 | !mp!e4- | e2 (d/c/B/A/) | B4- | B4 | d4- | d2 (c/B/A/^G/) | A4- | A2 z/ (E/A/B/) | c4- | 
 c2 (c/B/c/A/) | B4- | B4 | (B/4A/4B/-) B3- | B2 (B/c/B/A/) | B4- | B4 | !mf! A/z/z/B/ z A/ z/ | B/z/z/A/ z A/ z/ | 
