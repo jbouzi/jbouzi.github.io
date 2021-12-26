@@ -5,6 +5,7 @@ M:3/4
 K:F
 Q:1/4=174
 V:1 name="Bb Trumpet 3" snm="Tpt 3"
+%%MIDI transpose -2
 L:1/4
 Z4 | [P:A]Z8 | [P:B]Z8 | [P:C]Z7 |
 z .D .D | [P:D] z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | z .D .D | 
