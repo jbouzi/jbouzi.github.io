@@ -1,0 +1,23 @@
+X:1
+T:Libertango
+M:4/4
+K:C
+V:2 name="Bb Trumpet II" snm="Tpt II"
+L:1/4
+Z16 | Z16 | !mf!E/z/z/F/ z E/ z/ | F/z/z/E/ z F/ z/ | ^F/z/z/F/ z F/ z/ | 
+^F/z/z/F/ z F/ z/ | =F/z/z/F/ z F/ z/ | =F/z/z/F/ z F/ z/ | E/z/z/E/ z E/ z/ | E/z/z/E/ z E/ z/ | E/z/z/E/ z E/ z/ | E/z/z/E/ z E/ z/ | 
+_E/z/z/E/ z E/ z/ | _E/z/z/E/ z E/ z/ | F/z/z/F/ z F/ z/ | F/z/z/F/ z F/ z/ | D/z/z/D/ z D/ z/ | !>(!D3 !>)!z | Z3 | 
+z z/ !mf!F/ z/ F/ F/4F/4.F/ | Z2 | z2 z !mf!!<(!E | A2 !<)!z/ G/ G/4G/4.G/ | [K:Bb] z2 z (A/.G/) |
+z2 (A/.G/) z | z2 z (G/.=E/) | z2 (G/.=E/) z | z2 z (G/._E/) | z2 (G/._E/) z | z2 z (^F/.C/) | 
+z2 (^F/.C/) z | z2 z (^F/.C/) | z2 (^F/.C/) z || [K:C] !f! e4- | e2 d/c/B/A/ | B4- | B4 | d4- | 
+d3/2 B/ c/B/A/^G/ | A4- | A2 z/ E/A/B/ | c4- | c2 c/B/c/A/ | B4- | B4 | B/4A/4(B/ B3-) | 
+B2 B/c/B/A/ | B4- | !>(!B4 !>)! | Z6 | z2 z !f!E!cresendo! | B3/2 B/ z/ c/ c/4c/4.c/ | Z8 | 
+!p!C/z/z/C/ z2 | z/C/ z z C/C/ | ^D/z/z/D/ z D/D/ | z2 (3z^DD | =D/z/z/D/ z D/D/ | 
+z/D/ z z z/ D/ | C/z/z/C/ z C/C/ | z2 (3CCC | Z6 || [K:Eb] Z8 || Z8 | 
+e4- | e2 d/c/c/G/ | =A4- | A4 | d4- | d3/2 c/ c/=B/G/G/ | G4- | G3 d/e/ |] 
+
+V:1 name="Bb Trumpet I" snm="Tpt I"
+L:1/4
+Z16 | !mp!e4- | e2 (d/c/B/A/) | B4- | B4 | d4- | d2 (c/B/A/^G/) | A4- | A2 z/ (E/A/B/) | c4- | 
+c2 (c/B/c/A/) | B4- | B4 | (B/4A/4B/-) B3- | B2 (B/c/B/A/) | B4- | B4 | !mf! A/z/z/B/ z A/ z/ | B/z/z/A/ z A/ z/ | 
+B/z/z/c/ z B/ z/ | 
