@@ -2,9 +2,9 @@ X:1
 M:C
 L:1/4
 K:G
-Q:1/4=70
+Q:1/4=90
 V:1
 %%MIDI transpose -2
-B3/2 c/ B ^A | B/ B G/ E2 | z/ e e/ e/d/c/B/ | C2 A2 | z/ c A/ F c |
-B/ B G/ E z | z/ F F/ G/F/^E/F/ |[1 B C B2 :| [2 z/ B c/ B/A/G/F/ |
+B3/2 c/ B ^A | B/ B G/ E2 | z/ e e/ e/d/c/B/ | c2 A2 | z/ c A/ F c |
+B/ B G/ E z | z/ F F/ G/F/^E/F/ |[1 B c B2 :| [2 z/ B c/ B/A/G/F/ |
 E/F/G/A/ B/^A/ B | z/ e c/ A z | z/ B G/ E z | A/G/F/E/ ^D/E/F/G/ | E3 z :|]
