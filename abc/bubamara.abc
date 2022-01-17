@@ -12,5 +12,5 @@ V:2 name="Trumpet 2 in Bb" snm="Tpt 2"
 %%MIDI transpose -2
 %%MIDI beat 60 50 35 1
 E B, E B, | E B, E B, | E F G ^G | A E A E | A E A E |
-E B, E ^E | F ^C F =C |[1 B, F B, ^D :| [2 B, F B, ^D |
+E B, E ^E | F ^C E =C |[1 B, F B, ^D :| [2 B, F B, ^D |
 E B, E B, |  A E A E | E B, E ^E | F F B B | e B e B :|]
