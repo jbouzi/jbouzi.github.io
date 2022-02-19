@@ -2,7 +2,7 @@ X:1
 K:Bb
 M:C
 L:1/4
-Q:1/4=60
+Q:1/4=70
 V:1 name="Trumpet in Bb 3"
 %%MIDI transpose -2
 !p!D3 D | (F2 E D) | E3 E | D3 z | (B,3 =B,) | (C3 B,) | B,2 F2 | F3 z |: .D .D .E .E | (D3/2 E/) D2 | D D E E |
