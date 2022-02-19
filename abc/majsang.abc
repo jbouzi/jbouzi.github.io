@@ -12,4 +12,4 @@ V:2 name="Trumpet in Bb 1"
 %%MIDI transpose -2
 %%MIDI beat 40 30 20 0
 !p!B3 B | (d2 c B) | (B2- B/A/G/A/) | B3 z | (B3 =B) | (C3 B) | (B2- B/A/G/A/) | B3 z |: F F G G 
-(F3/2 G/ F2) | B B B B | (B3/2 c) d2 | c c (d3/2 B/) | (A2- A/c/)(B/G/) | F2 z2 
+(F3/2 G/ F2) | B B B B | (B3/2 c/) d2 | c c (d3/2 B/) | (A2- A/c/)(B/G/) | F2 z2 
