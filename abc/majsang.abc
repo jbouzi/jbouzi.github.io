@@ -3,13 +3,14 @@ K:Bb
 M:C
 L:1/4
 Q:1/4=70
-V:1 name="Trumpet in Bb 3"
-%%MIDI transpose -2
-!p!D3 D | (F2 E D) | E3 E | D3 z | (B,3 =B,) | (C3 B,) | B,2 F2 | F3 z |: .D .D .E .E | (D3/2 E/) D2 | D D E E |
-(D3/2 E/) F2 | F F F G | F2 =E2 | F2 z2 | (A, C) (E3/2 D/) | (D3/2 C/) C2 | (C E) (A3/2 B/) | (F3/2 =E/) _E2 | !<(!E2 D2!<)! | "_dim" F3/2 F/ (F E) |
-D2 E2 | D4 :|
-V:2 name="Trumpet in Bb 1"
+V:1 name="Trumpet in Bb 1"
 %%MIDI transpose -2
 %%MIDI beat 30 20 10 1
 !p!B3 B | (d2 c B) | (B2- B/A/G/A/) | B3 z | (B3 =B) | (C3 B) | (B2- B/A/G/A/) | B3 z |: F F G G 
 (F3/2 G/ F2) | B B B B | (B3/2 c/) d2 | c c (d3/2 B/) | (A2- A/c/)(B/G/) | F2 z2 
+V:2 name="Trumpet in Bb 3"
+%%MIDI transpose -2
+%%MIDI beat 120 110 95 1
+!p!D3 D | (F2 E D) | E3 E | D3 z | (B,3 =B,) | (C3 B,) | B,2 F2 | F3 z |: .D .D .E .E | 
+(D3/2 E/) D2 | D D E E | (D3/2 E/) F2 | F F F G | F2 =E2 | F2 z2 | (A, C) (E3/2 D/) | 
+(D3/2 C/) C2 | (C E) (A3/2 B/) | (F3/2 =E/) _E2 | !<(!E2 D2!<)! | "_dim" F3/2 F/ (F E) | D2 E2 | D4 :|
