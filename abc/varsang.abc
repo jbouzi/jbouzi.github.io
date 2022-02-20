@@ -8,7 +8,7 @@ Q:1/4=80
 V:1 name="Trumpet in Bb 1"
 %%MIDI transpose -2
 %%MIDI beat 40 30 20 1
-c c3/4c/4 c c3/4B/4 | A A A A B B3/4B/4 A A3/4A/4 | G B3/4A/4 G2 | A A3/4A/4 c c3/4c/4 | c c3/4c/4 c c3/4c/4 | c =B3/4B/4 c2 :|
+c c3/4c/4 c c3/4B/4 | A A A A | B B3/4B/4 A A3/4A/4 | G B3/4A/4 G2 | A A3/4A/4 c c3/4c/4 | c c3/4c/4 c c3/4c/4 | c =B3/4B/4 c2 :|
 V:2 name="Trumpet in Bb3"
 %%MIDI transpose -2
 %%MIDI beat 120 100 90 40
