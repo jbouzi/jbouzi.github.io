@@ -13,4 +13,4 @@ L:1/4
 %%MIDI transpose -2
 %%MIDI beat 120 100 80 40
 z (C B,) | z (D C | C2) (C | B,) A,2 | z (C B,) | z (D B,) | D2 D | D E3/4E/4 D | 
-|: F F (d3/4B/4) | c (c3/4B/4 A) | G2 B | A (A3/4^F/4 D) | Z | G (G3/4A/4G3/4A/4) | B2 ^F | G2 z:| 
+|: F F (d3/4B/4) | c (c3/4B/4 A) | G2 B | A (A3/4^F/4 D) | z3 | G (G3/4A/4G3/4A/4) | B2 ^F | G2 z:| 
