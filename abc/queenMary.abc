@@ -6,13 +6,22 @@ L:1/4
 K:Bb
 V:1 name="Trumpet 1 in Bb"
 %%MIDI transpose -2
-G4 | _A2 A2 | G4 | z4
+%%MIDI program 57
+G4 | _A2 A2 | G4 | z4 | G4 | c2 c2 | =B4 | z4 | 
+d4 | c2 A2 | B4 | z4 | B4 | _A2 F2 | G4 | z4 | c4 | c2 =B2 | c4 | z4 :| 
 V:2 name="Trumpet 2 in Bb"
 %%MIDI transpose -2
-=E4 | F2 F2 | =E4 | z4
+%%MIDI program 57
+=E4 | F2 F2 | =E4 | z4 | E4 | E2 F2 | G4 | z4 | 
+B4 | A2 ^F2 | G4 | z4 | G4 | F2 D2 | E4 | z4 | G4 | _A2 G2 | G4 | z4 :|
 V:3 name="Trumpet 3 in Bb"
 %%MIDI transpose -2
-C4 | C2 C2 | C4 | z4
+%%MIDI program 57
+C4 | C2 C2 | C4 | z4 | C4 | C2 C2 | D4 | z4 |  
+G4 | E2 D2 | D4 | z4 | E4 | C2 B,2 | B,4 | z4 | E4 | D2 D2 | C4 | z4 :| 
 V:4 name="Drums"
-%%MIDI program 48
-C,4 | C,2 C,2 | C,3 C,/4C,/4C,/4C,/4 | C,3 C,/4C,/4C,/4C,/4 |
+%%MIDI channel 10
+%%MIDI program 49
+F,,4 | F,,2 F,,2 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,4 | F,,2 F,,2 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,3 F,,/4F,,/4F,,/4F,,/4 |
+F,,4 | z4 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,4 | z4 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,4 | F,,2 F,,2 | F,,3 F,,/4F,,/4F,,/4F,,/4 | F,,3 F,,/4F,,/4F,,/4F,,/4 :|
+
