@@ -1,0 +1,87 @@
+X:1
+T:Mälardrottningen
+C:V. Widqvist, Arr: Gösta Morberg
+K:G
+M:C
+Q:1/4=140
+L:1/4
+V:1 name="Trumpet 1"
+%%MIDI transpose -2
+%%midi program 57
+!f!LG (B,/C/ ^C) D | !>!G (E/F/ G) A | G2 F2 | G G/G/ G z |: !pp!!<(! z (B/c/ ^c) d !<)!|!p!!<(!z (^c/d/ ^d) e !<)!| !mf!!<(!z (G/A/ B) e | 
+!f!!<(!!>!d3/2 G/ B2!<)! | !ff! c/c/c/ z/ F c | (c/A/c/A/) !>!c2 | B/B/B/ z/ D B | (B/G/B/G/) !>!B2 | !pp!z (B/c/ ^c) d | !p!z (^c/d/ ^d) e | !mf!z (G/A/ B) e | 
+!>!!f!^d3/2 F/ d2 | !ff!e/e/e/ z/ (B/e/B/e/) | d/d/d/ z/ (B/d/B/d/) | ^c/c/c/ z/ (^A/c/^G/A/ |[1 B) z =A2 :|[2 B) z z2 ||: !f!z B/B/ B B | 
+B B B B | z B/B/ B B | B B B B | z d/d/ d2- | d d/d/ (d2 | ^c) c/c/ d/d/d/d/ | d z z2 | z B/B/ B B | 
+B B B B | z B/B/ B B | B B B B | A4- | A ({^G} A) ({G} A) ({G} A) | B4- |[1 B z z2 :|[2 B z B z || 
+"TRIO"[K:Eb]!ff!!>(!c4- | c4 !>)! |: Z31 | z z/ !p!(=e/ ^d) z/ (e/ | 
+[K:C]f4-) | f z/ (d/ ^c) z/ (d/ | e4-) | e z/ (c/ B) z/ (A/ | !<(! G2) ^G2 | A2 f2 | e z/ (B/ c) a | !<)!g z/ !ff! (e/ ^d) z/ (e/ | 
+f4-) | f z/ (d/ ^c) z/ (d/ | e4-) | e z/ (c/B) z/ c/ | _e2-e/c/B/c/ | =e2-e/c/B/c/ | !>!a3/2 ^g/ (=g/f/)e/d/ |[1 c z !>(!{^F}G2!>)! :|[2 c z c z |] 
+V:2 name="Trumpet 2"
+L:1/4
+%%MIDI transpose -2
+%%midi program 57
+!f!B (B,/C/ ^C) D | _B (E/F/ G) A | G2 F2 | G G/G/ G z |: !p!z (G/A/ !<(!^A) B | z (^A/B/ c) B | z (B,/C/ D) G | 
+B3/2 D/ G2!<)! | !ff!A/A/A/ z/ D A | (A/F/A/F/) !>!A2 | G/G/G/ z/ D B | (G/D/G/D/) !>!G2 | !pp! z (G/A/ ^A) B | z (^A/B/ c) B |
+!<(!z (B,/C/ D) G | B3/2 ^D/ B2!<)! | !ff!B/B/B/ z/ (G/B/G/B/) | B/B/B/ z/ (F/B/F/B/) | ^A/A/A/ z/ (!>!E2 |[1 D)!>(! z !>!F2 !>)!:|[2 D z z2 |: 
+!f! z G/G/ G G | G G G G | z G/G/ G G | G G G G | z D/D/ D2- | D D/D/ (D2 | ^C) ^A/A/ =c/c/c/c/ | c z z2 |  
+z G/G/ G G | G G G G | z G/G/ G G | G G G G | (E4 | F) F F F | G4- |[1 G z z2 :|[2 G z G z ||
+"TRIO"[K:Eb]!ff!!>(!E4- | E4 !>)! |: Z31 | z z/ !p!(c/ =B) z/ (c/ | 
+[K:C]d4-) | d z/ (B/ ^A) z/ (B/ | c4-) | c z/ (E/ F) z/ F/ | !<(! F4- | F2 d2 | c z/ (F/E) c | e !<)!z/!ff! (c/B) z/ (c/ | 
+d4-) | d z/ (B/ ^A) z/ (B/ | c4-) | c z/ (E/F) z/ E/ | !>!c2-c/c/B/c/ | !>!c2-c/c/B/c/ | !>!f3/2 f/ (e/d/)c/B/ |[1 c z F2 :|[2 c z c z |] 
+V:3 name="Trumpet 3"
+L:1/4
+K:G
+%%MIDI transpose -2
+%%midi program 57
+!f!!>!D z z2 | !>!E z z2 | D2 C2 | B, B,/B,/ B, z |: !pp!!<(!B,4 | D4 | G4- | G2 D2 | !<)!!ff! D2 F2 | 
+A2 F2 | G4 | D4 | !pp!!<(!B,4 | D4 | (G4 | A2) !>!A2 !<)! | !ff! G/G/G/ z/ (E/G/E/G/) | F/F/F/ z/ (D/F/D/F/) |
+F/F/F/ z/ !>!F2- |[1 F z !>(!!>!C2 !>)! :|[2 F z z2 |: !f! z D/D/ D D | D D D D | z D/D/ D D | D D D D | z D/D/ D2- |
+D D/D/ (D2 | ^C E/E/ F/F/F/F/ | F z z2 | z ^D/D/ D D | ^D D D D | z E/E/ E E |  E E E E | C4- | 
+C C C C | B,4- |[1 B, z z2 :|[2 B, z B, z || "TRIO"[K:Eb]!ff!!>(!G4- | G4!>)! |: Z31 | 
+!p! z z/ (G/ =A) z/ (G/ ||[K:C] B4- | B) z/ (F/E) z/ (F/ | G4-) | G z/ G/-G z/ (D/ | !<(! B,4-) | B,2 B2 | G z/ (F/E) e | 
+c !<)! z/ !ff! (G/ A) z/ (G/ | B4- | B) z/ (F/E) z/ (F/ | G4-) | G z/ G/-G z/ (G/ | !>!_A2-) A/A/A/A/ | !>!G2- G/G/G/G/ | A3/2 ^G/ (=G/F/)E/D/ |[1 C z !>!!>(!B,2!>)! :|[2 C z E z |] 
+V:4 name="Bas 1-2"
+%%MIDI transpose 0
+L:1/4
+K:F
+!f!!>!F,,z z2 | !>!=B,,, z z2 | C,,2 C,,2 | F,, F,,/F,,/ F,, z |: !pp!!<(! F,, z C,, z | F,, z C,, z | F,, z C,, z | F,, z C,, z !<)! |
+!ff! E,, z C,, z | E,, z C,, z | F,, z C,, z | F,, z C,, z | !pp!!<(!F,, z C,, z | F,, z C,, z | F,, z C,, z | A,, z A,, z!<)!!ff! | D,, z D,, z | 
+E,, z E,, z | E,, E,, !>!E,,2 |[1 A,, z !>(! C,,2 !>)! :|[2 A,, !ff!z  C,,2 |: F,, z F,,2- | F,,3/2 A,,,/ C,,3/2 F,,/ | A,,4- | A,,3/2 F,,/ E,,3/2 F,,/ | 
+G,,2 A,,2 | B,,2 (3E,,F,,E,, | D,,3/2 _D,,/ C,,2- | C,,2 A,,,2 | A,, z E,,2- | E,,3/2 G,,/ F,,3/2 E,,/ | D,,4- | D,,3/2 [C,C,,]/ [B,,B,,,]3/2 [A,,A,,,]/ | 
+[G,,G,,,]2 D,,2 | C,,2 (3G,,A,,G,, | F,,4- |[1 F,, z C,,2 :|[2 F,, z F,, z || "TRIO"[K:Db]!ff!!>(! B,, z F,, z | B,, z F,, z !>)! 
+|: !pp! B,, z F,, z | B,, z F,, z | B,, z F,, z | B,, z F,, z | E,, z E,, z | E,, z E,, z | B,, z F,, z | B,, z F,, z |
+C, z F,, z | C, z F,, z | =A,, z F,, z | C, z F,, z | B,, z F,, z | B,, z F,, z | =A,, F,, A,, C, | [F,F,,] [E,E,,] [D,D,,] [C,C,,] |
+[B,,B,,,] z F,, z | B,, z F,, z | B,, z F,, z | B,, z F,, z | C, z A,, z | E,,z A,,, z | D,, z A,,, z | D,, z !>!F,,2 | B,, z F,, z | 
+B,, z F,, z | E,, z E,, z | E,, z E,, z | F,, z F,, z | F,, z F,, z | B,,2 F,, E,, | B,,, z z2 | [K:Bb]!p! C, z F,, z | 
+C, z F,, z | B,, z F,, z | B,, z F,, z | !<(! C, z F,, z | C, z F,, z | B,, z F,, D,, !<)! | B,,, z z2 | !ff! C, z F,, z | C, z F,, z |
+B,, z F,, z | B,, z F,, z | _G,, G,, !>!G,,2 | F,, F,, !>!F,,2 | !>!F,,2 !>!F,, !>!F,, |[1 !>![B,,B,,,] z !>(!!>!F,,2!>)! :|[2 !>![B,,B,,,] z !>![B,,B,,,] z |] 
+V:5 name="Oboe 1"
+%%MIDI transpose 0
+K:F 
+L:1/4
+!f!!>!f (A/B/ =B) c | !>!f (d/e/ f) g | a2 g2 | f f/f/ f z |: !pp!!<(!z (A/B/ =B) c | z (=B/c/ ^c) d | z (F/G/ A) d | 
+!>!c3/2 E/ c2 !<)! | !ff! B/B/B/ z/ E B | (B/G/B/G/) !>!B2 | A/A/A/ z/ C A | (A/F/A/F/) !>!A2 | !pp!!<(!z (A/B/ =B) c | z (=B/c/ ^c) d | z (F/G/ A) d | 
+!>!^c3/2 E/ c2 | !<)!!ff! d/d/d/ z/ (A/d/A/d/) | c/c/c/ z/ (A/c/A/c/) | =B/B/B/ z/ (^G/B/G/B/ |[1 A) !>(! z B2 !>)! :|[2 A z z2 |: !f!z/ (A/=B/^c/ d/e/f/g/ | 
+a) ( (3c/d/e/ f ) z | z/ (A/B/c/ d/e/f/g/ | a) ( (3f/e/d/ c) z | z e z e | z e z e | z f/f/ e e | e e e e | z/ (A/=B/^c/ d/e/^f/^g/ | 
+a) ( (3e/^f/^g/ a) z | z/ (F/G/A/ =B/^c/d/e/ | f) ( (3A/=B/^c/ d) z | z {^c}d {^c}d {^c}d | e z c2 ({=Bc}| A) (G/A/ B/c/d/e/ |[1 f) z z2 :|[2 f z f z ||
+"TRIO"[K:Db]z2 {F=G=A} !>(! !f! B2 !>)! | z2 {F=G=A} !>(! !mf! B2 !>)! |: Z31 | z z/ !p! (=d/ ^c) z/ (d/ | 
+[K:Bb] e4-) | e z/ (c/ =B) z/ (c/ | d4-) | d z/ (B/ A) z/ (G/ | !<(! F2) ^F2 | G2 e2 | d z/ (A/ B) g | f z/!<)!!ff! (d/ ^c) z/ (d/ | 
+e4-) | e z/ (c/ =B) z/ (c/ | d4-) | d z/ (B/A) z/ (B/ | !>!_d2-) d/B/A/B/ | !>!=d2- d/B/A/B/ | !>!g3/2 ^f/ (=f/e/)d/c/ |[1 B z !>(!{=e}f2!>)! :|[2 B z {FGA}B z |] 
+V:6 name="Solo-klarinett"
+%%MIDI transpose -2
+L:1/4
+K:G
+!>!g (B/c/ ^c) d | !>!g (e/f/ g) a | b2 a2 | g g/g/ g z |:!pp!!<(!z (B/c/ ^c) d | z (^c/d/ ^d) e | z (g/a/ b) e' | d'3/2 g/ b2 !<)!|
+!ff!e'/e'/e'/ z/ f c' | (c'/a/c'/a/) !>!c'2 | b/b/b/z/ d b | (b/g/b/a/) !>!b2 | !pp!!<(!z (B/c/ ^c) d | z (^c/d/ ^d) e | z (g/a/ b) e' | ^d'3/2 f/ d'2 !<)!| 
+!ff!e'/e'/e'/ z/ (b/e'/b/e'/) | d'/d'/d'/ z/ (b/d'/b/d'/) | ^c'/c'/c'/ z/ (^a/c'/^g/a/ |[1 b) z !>(!!>!=a2!>)! :|[2 b) z z2 |: !f!z/ (G/A/B/ c/d/e/f/ | g) ((3d/e/f/ g) z |
+z/ (B/c/d/ e/f/g/a/ | b) ((3g/f/e/ d) z | z c z c | z c z c | z ^c/c/ d d | d d ^d d | 
+V:7 name="Flöjt 1"
+L:1/4
+K:F
+%%MIDI transpose 0
+%%midi program 74
+!f!!>!f (A/B/ =B) c | !>!f (d/e/ f) g | a2 g2 | f f/f/ f z |: !pp!z (A/B/ =B) c | !p!z (=B/c/ ^c) d | !mf!z (f/g/ a) d' | !f! !>!c'3/2 f/ a2 | 
+!ff!b/b/b/z/ e b | (b/g/b/g/) !>!b2 | a/a/a/ z/ c a | (a/f/a/f/) !>!a2 | !pp!z (A/B/ =B) c | !p!z (=B/c/ ^c) d | !mf!z (f/g/ a) d' | !f! !>!^c'3/2 f/ a2 |
+!ff!d'/d'/d'/ z/ (a/d'/a/d'/) | c'/c'/c'/ z/ (a/c'/a/c'/) | =b/b/b/ z/ (^g/b/^f/g/ |[1 a) z !>!g2 :|[2 a) z z2 |: !f!z/ (A/B/c/ d/e/f/g/ | a)((3c'/d'/e'/ f') z |
+z/ (f/g/a/ b/c'/d'/e'/ | f') ( (3f'/e'/d'/ c') z | z b z b | z b z b | z ^g/g/ g b | b b a a | z/ (^c/d/e/ ^f/^g/a/=b/ | ^c') ( (3e/^f/^g/ a) z | 
+z/ (d/e/f/ g/a/=b/^c'/ | d') ( (3a/=b/^c'/ d') z | 
