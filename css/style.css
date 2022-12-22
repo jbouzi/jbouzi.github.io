@@ -93,7 +93,7 @@ h1 {
 
 /* The switch - the box around the slider */
 .switch {
-  position: relative;
+  float:right;
   display: inline-block;
   width: 60px;
   height: 34px;
