@@ -1,26 +1,107 @@
 X:1
 T:Att angöra en brygga
 C:Lars Färnlöf
+C:arr: Anders Widestrand
 K:F
 Q:1/4=120
 M:3/4
-V:1 name="Part 1 in Bb"
+V:1 name="Part 1, Bb" snm="1 Bb"
 L:1/4
 %%MIDI transpose -2
-(e d _d | c A F | E D _D | C) c2 | [P:A] (A3- | A2 B/c/ | d _d c | 
+!mf!(e d _d | c A F | E D "rit."_D | C) c2 | [P:A]"a tempo" (A3- | A2 B/c/ | d _d c | 
 B2) (A | c B3/2 D/ | B A d | A G2) | (B A ^C | G F E |  F2) (G/^G/ | 
 A c d | e2 _e | d c =B | _B A) (e | D c B | ^C A G) | [P:B] (A3- | 
 A2 B/c/ | d _d c | B2) (A | c B3/2 D/ | B A d | A G2) | (B A ^C | 
 G F E | F2) (G/^G/ | A c d | e2 _e | d c B | A2 _A | G2 F-) |
-F/E/ (F ^G) |: [P:C][K:C] A3- | A3 | A3- | A3 | A3/4c/4 c2 | A3/4c/4 c2 |  
-A3/4c/4 c2 | [1 A3/4c/4 c2 :| [2 (A c ^c) |] 
-V:2 name="Part 2 in Bb"
+F/E/ (F ^G) |: [P:C][K:C] A3- | A3 | A3- | A3 | A3/4c/4- c2 | A3/4c/4- c2 |  
+A3/4c/4- c2 |[1 A3/4c/4- c2 :|[2 (A c ^c) || [P:D][K:F] (e d _d | c A F | E D "rit."_D | C) c2 | 
+[P:E]"a tempo" (A3- | A2 B/c/ | d _d c | B2) (A | c B3/2 D/ | B A d | A G2) |
+(B A ^C | G F E |  F2) (G/^G/ | A c d | e2 _e | d c "rit."B | A2) (_A | G2 F-) | !fermata!F3 |]
+V:2 name="Part 2, Bb" snm="2 Bb"
+M:3/4
 L:1/4
 %%MIDI transpose -2
-A3 | F3 | (E D _D | C) _A2 | 
-[P:A]Z8 | (F/E/ D2 | A, ^C F- | 
+!mf!A3 | F3 | (E D "rit."_D | C) _A2 | [P:A]"a tempo"Z8 | (F/E/ D2 | A, ^C F- | 
 F A2- | A2) (_A | E G E | ^F2) (A | D G2 | ^C E2) | [P:B] F3 | 
 E3 | (_E/^F/ B A | ^F2) (F | G G3/2 D/ | D/_E/ ^F A | A G2) | (G2 ^C | 
-F/E/ D2 | ^C2) (F- | F A2- | A2 _A | G A _G | F2 E | D E F-) | F/E/ (D F) | 
-[P:C][K:C] |: E3 | F3 | ^F3 | =F3 | E3 | F3 | ^F3 | [1 =F3 :|[2 (G E G) |]
-
+F/E/ D2 | ^C2) (F- | F A2- | A2 _A | G A _G | F2 E | D E F-) | F/E/ (D F) 
+[P:C][K:C] |: E3 | F3 | ^F3 | =F3 | E3 | F3 | ^F3 |[1 =F3 :|[2 (G E G) ||[P:D][K:F] A3 | F3 | (E D "rit."_D | 
+C) _A2 | [P:E]"a tempo" F3 | E3 | (_E/^F/ B A | ^F2) (F | G G3/2 D/ | 
+D/_E/ ^F A | A G2) | (G2 ^C | F/E/ D2 | ^C2) (F- | F A2- | A2 _A | G A "rit."_G | F2) (E | D E F-) | !fermata!F3 |]
+V:3 name="Part 1, Eb" snm="1 Eb"
+L:1/4
+M:3/4
+K:C
+%%MIDI transpose -9
+!mf!(b a _a | g e c | B A "rit."_A | G) g2 | [P:A]"a tempo" (e3- | e2 f/g/ | a _a g | 
+f2) (e | g f3/2 A/ | f e a | e d2) | (f e ^G | d c B |  c2) (d/^d/ | 
+e g a | b2 _b | a g =f | _f e) (b | A g f | ^G e d) | [P:B] (e3- | 
+e2 f/g/ | a _a g | f2) (e | g f3/2 A/ | f e a | e d2) | (f e ^G | 
+d c B | c2) (d/^d/ | e g a | b2 _b | a g f | e2 _e | d2 c-) |
+c/B/ (c ^d) |: [P:C][K:G] e3- | e3 | e3- | e3 | e3/4g/4- g2 | e3/4g/4- g2 |  
+e3/4g/4- g2 |[1 e3/4g/4- g2 :|[2 (e g ^g) || [P:D][K:c] (b a _a | g e c | B A "rit."_A | G) g2 | 
+[P:E]"a tempo" (e3- | e2 f/g/ | a _a g | f2) (e | g f3/2 A/ | f e a | e d2) |
+(f e ^G | d c B |  c2) (d/^d/ | e g a | b2 _b | a g "rit."f | e2) (_e | d2 c-) | !fermata!c3 |]
+V:4 name="Part 2, Eb" snm="2 Eb"
+L:1/4
+M:3/4
+K:C
+%%MIDI transpose -9
+!mf!e3 | c3 | (B A "rit."_A | G) _e2 | [P:A]"a tempo"Z8 | (c/B/ A2 | E ^G c- | 
+c e2- | e2) (_e | B d B | ^c2) (e | A d2 | ^G B2) | [P:B] c3 | 
+B3 | (_B/^c/ f e | ^c2) (c | d d3/2 A/ | A/_B/ ^c e | e d2) | (d2 ^G | 
+c/B/ A2 | ^G2) (c- | c e2- | e2 _e | d e _d | c2 B | A B c-) | c/B/ (A c) 
+[P:C][K:G] |: B3 | c3 | ^c3 | =c3 | B3 | c3 | ^c3 |[1 =c3 :|[2 (d B d) ||[P:D][K:c] e3 | c3 | (B A "rit."_A | 
+G) _e2 | [P:E]"a tempo" c3 | B3 | (_B/^c/ f e | ^c2) (c | d d3/2 A/ | 
+A/_B/ ^c e | e d2) | (d2 ^G | c/B/ A2 | ^G2) (c- | c e2- | e2 _e | d e "rit."_d | c2) (B | A B c-) | !fermata!c3 |]
+V:5 name="Part 1, C" snm="1 C"
+L:1/4
+M:3/4
+K:Eb
+%%MIDI transpose 0
+!mf!(d' c' =b | _b g e | d c "rit."=B | _B) b2 |[P:A]"a tempo" (g3- | g2 a/b/ | c' =b _b | 
+a2) (g | b a3/2 c/ | a g c' | g f2) | (a g =B | f e d | e2) (f/^f/ | 
+g b c' | d'2 _d' | c' b =a | _a g) (c' | c b a | =B g f) | [P:B] (g3- | 
+g2 a/b/ | c' =b _b | a2) (g | b a3/2 c/ | a g c' | g f2) | (a g =B | 
+f e d | e2) (f/^f/ | g b c' | d'2 _d' | c' b a | g2 _g | f2 e-) |
+e/d/ (e ^f) |: [K:Bb][P:C] g3- | g3 | g3- | g3 | g3/4b/4-b2 | g3/4b/4-b2 |
+g3/4b/4-b2 |[1 g3/4b/4-b2 :|[2 (g b =b) || [P:D][K:Eb] (d' c' =b | _b g e | d c "rit."=B | _B) b2 |
+[P:E]"a tempo"(g3- | g2 a/b/ | c' =b _b | a2) (g | b a3/2 c/ | a g c' | g f2) |
+(a b =B | f e d | e2) (f/^f/ | g b c' | d'2 _d' | c' b "rit."a | g2) (_g | f2 e-) | !fermata!e3 |] 
+V:6 name="Part 2, C" snm="2 C"
+L:1/4
+M:3/4
+K:Eb
+%%MIDI transpose 0
+!mf!g3 | e3 | (d c "rit."_c | B) _g2 | [P:A]"a tempo" Z8 | (e/d/ c2 | G =B e- | 
+e g2- | g2) (_g | d f d | ^e2) (g | c f2 | ^B d2) | [P:B] e3 | 
+d3 | (_d/=e/ a g | =e2) (e | f f3/2 c/ | c/_d/ =e g | g f2) | (f2 =B | 
+e/d/ c2 | ^B2) (e- | e g2- | g2 _g | f g _f | e2 d | c d e-) | e/d/ (c e) 
+[P:C][K:Bb] |: d3 | e3 | ^e3 | =e3 | d3 | e3 | ^e3 |[1 =e3 :|[2 (f d f) ||[P:D][K:Eb] g3 | e3 | (d c "rit."_c | 
+B) _g2 | [P:E]"a tempo" e3 | d3 | (_d/^e/ a g | ^e2) (e | f f3/2 c/ | 
+c/_d/ ^e g | g f2) | (f2 ^B | e/d/ c2 | ^B2) (e- | e g2- | g2 _g | f g "rit."_f | e2) (d | c d e-) | !fermata!e3 |]
+V:7 name="Part 4, Bb" snm="4 Bb"
+L:1/4
+M:3/4
+K:F
+%%MIDI transpose -2
+!mf!c3 | A3 | F3 | E B2 | [P:A]"a tempo" Z11 | z2 (_d | 
+G c G | c3) | B3- | B3 | [P:B] A3- | A3- | A c2- | c3 | (B3 | A c2 | B3- | B) (G2 | 
+A3- | A3 | A d2- | d2) (_d | c3 | B3 | =B _B A- | A2) z |: [P:C][K:C]!f! E A3/4B/4 c3/4d/4 | e d3/4e/4 c | d c3/4d/4 B | c B3/4c/4 A | 
+z E A3/4B/4 | c3/4d/4 e d3/4e/4 | c d c3/4d/4 |[1 c3/4B/4 A z :|[2 c3/4B/4 A z ||[P:D][K:F] c3 | 
+A3 | F3 | E B2 | [P:E]"a tempo" A3- | A3- | A c2- | c3 | (B3 | A c2 | B3- | B) (G2 | A3- | 
+A3- | A d2- | d2) (_d | c3 | B3) | (=B _B A-) | !fermata!A3 |] 
+%%MIDI transpose 0
+V:8 name="Part 5, B.C." snm="5 B.C."
+L:1/4
+M:3/4
+K:Eb clef=bass
+%%MIDI transpose 0
+!mf! [C,C,,]3 | [C,C,,]2 G,, | F,,2 "rit."F,, | [B,,B,,,] [C,C,,] [D,D,,] | [P:A]"a tempo" [E,E,,]3 | [D,D,,]3 | [_D,_D,,]3 | 
+[C,C,,]3 | [F,F,,]3 | [=E,=E,,]2 [E,E,,] | [_E,_E,,]3 | [D,D,,] G,,2 | C,2 C, | =B,,2 B,, | 
+_B,,3 | =A,,2 _A,, | G,,2 G,, | [C,C,,]3 | F,, G,, A,, | B,,3 | [P:B] [E,E,,]3 | [D,D,,]3 | [_D,_D,,]3 | [C,C,,]3 | [F,F,,]3 | [=E,=E,,]2 [E,E,,] | [_E,_E,,]3 | [D,D,,] G,,2 | 
+C,2 (D,/C,/) | =B,,2 B,, | _B,,3 | =A,,2 _A,, | G,,2 [C,C,,] | F,,2 [B,,B,,,] | [E,E,,]3 | 
+[=A,,=A,,,]2 [D,D,,] |: [P:C][K:Bb] G,,2 G,, | G,,3 | G,,2 G,, | G,,3 | G,,2 G,, | G,,3 | 
+G,,2 G |[1 G,,3 :|[2 G,,3 || [K:Eb][P:D] [C,C,,]3 | [C,C,,]2 G,, | F,,2 "rit."F,, | [B,,B,,,] [C,C,,] [D,D,,] | 
+[P:E]"a tempo" [E,E,,]3 | [D,D,,]3 | [_D,_D,,]3 | [C,C,,]3 | [F,F,,]3 | [=E,=E,,]2 [E,E,,] | [_E,_E,,]3 | [D,D,,] G,,2 | 
+C,2 (D,/C,/) | =B,,2 B,, | _B,,3 | =A,,2 _A,, | G,,2 "rit."[C,C,,] | [F,F,,]2 [B,,B,,,] | [E,E,,]2 [E,E,,]- | !fermata![E,E,,]3 |] 
