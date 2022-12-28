@@ -21,7 +21,8 @@ V:2 name="Part 2, Bb" snm="2 Bb"
 M:3/4
 L:1/4
 %%MIDI transpose -2
-!mf!A3 | F3 | (E D "rit."_D | C) _A2 | [P:A]"a tempo"Z8 | (F/E/ D2 | A, ^C F- | 
+!mf!A3 | F3 | (E D "rit."_D | C) _A2 | [P:A]"a tempo" z3 | z3 | z3 |
+z3 | z3 | z3 | z3 | z3 | (F/E/ D2 | A, ^C F- | 
 F A2- | A2) (_A | E G E | ^F2) (A | D G2 | ^C E2) | [P:B] F3 | 
 E3 | (_E/^F/ B A | ^F2) (F | G G3/2 D/ | D/_E/ ^F A | A G2) | (G2 ^C | 
 F/E/ D2 | ^C2) (F- | F A2- | A2 _A | G A _G | F2 E | D E F-) | F/E/ (D F) 
